@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C261AAD51F5F01190013AFFE /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261AAD41F5F01190013AFFE /* ConnexionController.swift */; };
+		C282A4561F680A7900E18B2B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282A4551F680A7900E18B2B /* Users.swift */; };
+		C29EA66E1F56F93500456151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA66D1F56F93500456151 /* AppDelegate.swift */; };
+		C29EA6701F56F93500456151 /* AccueilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA66F1F56F93500456151 /* AccueilController.swift */; };
+		C29EA6731F56F93500456151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6711F56F93500456151 /* Main.storyboard */; };
+		C29EA6751F56F93500456151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6741F56F93500456151 /* Assets.xcassets */; };
+		C29EA6781F56F93500456151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6761F56F93500456151 /* LaunchScreen.storyboard */; };
+		C29EA6831F56F93600456151 /* AMI_DECOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA6821F56F93600456151 /* AMI_DECOTests.swift */; };
+		C29EA68E1F56F93600456151 /* AMI_DECOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA68D1F56F93600456151 /* AMI_DECOUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C29EA67F1F56F93600456151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C29EA6621F56F93400456151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C29EA6691F56F93400456151;
+			remoteInfo = "AMI DECO";
+		};
+		C29EA68A1F56F93600456151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C29EA6621F56F93400456151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C29EA6691F56F93400456151;
+			remoteInfo = "AMI DECO";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C261AAD41F5F01190013AFFE /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
+		C282A4551F680A7900E18B2B /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		C29EA66A1F56F93500456151 /* AMIDECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMIDECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29EA66D1F56F93500456151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C29EA66F1F56F93500456151 /* AccueilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccueilController.swift; sourceTree = "<group>"; };
+		C29EA6721F56F93500456151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C29EA6741F56F93500456151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C29EA6771F56F93500456151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C29EA6791F56F93500456151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C29EA67E1F56F93600456151 /* AMIDECOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMIDECOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29EA6821F56F93600456151 /* AMI_DECOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMI_DECOTests.swift; sourceTree = "<group>"; };
+		C29EA6841F56F93600456151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C29EA6891F56F93600456151 /* AMIDECOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMIDECOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29EA68D1F56F93600456151 /* AMI_DECOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMI_DECOUITests.swift; sourceTree = "<group>"; };
+		C29EA68F1F56F93600456151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C29EA6671F56F93400456151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA67B1F56F93600456151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA6861F56F93600456151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C29EA6611F56F93400456151 = {
+			isa = PBXGroup;
+			children = (
+				C29EA66C1F56F93500456151 /* AMI DECO */,
+				C29EA6811F56F93600456151 /* AMI DECOTests */,
+				C29EA68C1F56F93600456151 /* AMI DECOUITests */,
+				C29EA66B1F56F93500456151 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C29EA66B1F56F93500456151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA66A1F56F93500456151 /* AMIDECO.app */,
+				C29EA67E1F56F93600456151 /* AMIDECOTests.xctest */,
+				C29EA6891F56F93600456151 /* AMIDECOUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C29EA66C1F56F93500456151 /* AMI DECO */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA66D1F56F93500456151 /* AppDelegate.swift */,
+				C29EA66F1F56F93500456151 /* AccueilController.swift */,
+				C261AAD41F5F01190013AFFE /* ConnexionController.swift */,
+				C29EA6711F56F93500456151 /* Main.storyboard */,
+				C29EA6741F56F93500456151 /* Assets.xcassets */,
+				C29EA6761F56F93500456151 /* LaunchScreen.storyboard */,
+				C29EA6791F56F93500456151 /* Info.plist */,
+				C282A4551F680A7900E18B2B /* Users.swift */,
+			);
+			path = "AMI DECO";
+			sourceTree = "<group>";
+		};
+		C29EA6811F56F93600456151 /* AMI DECOTests */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA6821F56F93600456151 /* AMI_DECOTests.swift */,
+				C29EA6841F56F93600456151 /* Info.plist */,
+			);
+			path = "AMI DECOTests";
+			sourceTree = "<group>";
+		};
+		C29EA68C1F56F93600456151 /* AMI DECOUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA68D1F56F93600456151 /* AMI_DECOUITests.swift */,
+				C29EA68F1F56F93600456151 /* Info.plist */,
+			);
+			path = "AMI DECOUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C29EA6691F56F93400456151 /* AMIDECO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C29EA6921F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECO" */;
+			buildPhases = (
+				C29EA6661F56F93400456151 /* Sources */,
+				C29EA6671F56F93400456151 /* Frameworks */,
+				C29EA6681F56F93400456151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMIDECO;
+			productName = "AMI DECO";
+			productReference = C29EA66A1F56F93500456151 /* AMIDECO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C29EA67D1F56F93600456151 /* AMIDECOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C29EA6951F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECOTests" */;
+			buildPhases = (
+				C29EA67A1F56F93600456151 /* Sources */,
+				C29EA67B1F56F93600456151 /* Frameworks */,
+				C29EA67C1F56F93600456151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C29EA6801F56F93600456151 /* PBXTargetDependency */,
+			);
+			name = AMIDECOTests;
+			productName = "AMI DECOTests";
+			productReference = C29EA67E1F56F93600456151 /* AMIDECOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C29EA6881F56F93600456151 /* AMIDECOUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C29EA6981F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECOUITests" */;
+			buildPhases = (
+				C29EA6851F56F93600456151 /* Sources */,
+				C29EA6861F56F93600456151 /* Frameworks */,
+				C29EA6871F56F93600456151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C29EA68B1F56F93600456151 /* PBXTargetDependency */,
+			);
+			name = AMIDECOUITests;
+			productName = "AMI DECOUITests";
+			productReference = C29EA6891F56F93600456151 /* AMIDECOUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C29EA6621F56F93400456151 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "AS Technology";
+				TargetAttributes = {
+					C29EA6691F56F93400456151 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					C29EA67D1F56F93600456151 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C29EA6691F56F93400456151;
+					};
+					C29EA6881F56F93600456151 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C29EA6691F56F93400456151;
+					};
+				};
+			};
+			buildConfigurationList = C29EA6651F56F93400456151 /* Build configuration list for PBXProject "AMIDECO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C29EA6611F56F93400456151;
+			productRefGroup = C29EA66B1F56F93500456151 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C29EA6691F56F93400456151 /* AMIDECO */,
+				C29EA67D1F56F93600456151 /* AMIDECOTests */,
+				C29EA6881F56F93600456151 /* AMIDECOUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C29EA6681F56F93400456151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29EA6781F56F93500456151 /* LaunchScreen.storyboard in Resources */,
+				C29EA6751F56F93500456151 /* Assets.xcassets in Resources */,
+				C29EA6731F56F93500456151 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA67C1F56F93600456151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA6871F56F93600456151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29EA6661F56F93400456151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C282A4561F680A7900E18B2B /* Users.swift in Sources */,
+				C29EA6701F56F93500456151 /* AccueilController.swift in Sources */,
+				C29EA66E1F56F93500456151 /* AppDelegate.swift in Sources */,
+				C261AAD51F5F01190013AFFE /* ConnexionController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA67A1F56F93600456151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29EA6831F56F93600456151 /* AMI_DECOTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29EA6851F56F93600456151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29EA68E1F56F93600456151 /* AMI_DECOUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C29EA6801F56F93600456151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C29EA6691F56F93400456151 /* AMIDECO */;
+			targetProxy = C29EA67F1F56F93600456151 /* PBXContainerItemProxy */;
+		};
+		C29EA68B1F56F93600456151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C29EA6691F56F93400456151 /* AMIDECO */;
+			targetProxy = C29EA68A1F56F93600456151 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C29EA6711F56F93500456151 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C29EA6721F56F93500456151 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C29EA6761F56F93500456151 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C29EA6771F56F93500456151 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C29EA6901F56F93600456151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C29EA6911F56F93600456151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C29EA6931F56F93600456151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AMI DECO/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECO";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C29EA6941F56F93600456151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AMI DECO/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECO";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C29EA6961F56F93600456151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AMI DECOTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECOTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMIDECO.app/AMIDECO";
+			};
+			name = Debug;
+		};
+		C29EA6971F56F93600456151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AMI DECOTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECOTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMIDECO.app/AMIDECO";
+			};
+			name = Release;
+		};
+		C29EA6991F56F93600456151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "AMI DECOUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECOUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "AMI DECO";
+			};
+			name = Debug;
+		};
+		C29EA69A1F56F93600456151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "AMI DECOUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECOUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "AMI DECO";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C29EA6651F56F93400456151 /* Build configuration list for PBXProject "AMIDECO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29EA6901F56F93600456151 /* Debug */,
+				C29EA6911F56F93600456151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C29EA6921F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29EA6931F56F93600456151 /* Debug */,
+				C29EA6941F56F93600456151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C29EA6951F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29EA6961F56F93600456151 /* Debug */,
+				C29EA6971F56F93600456151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C29EA6981F56F93600456151 /* Build configuration list for PBXNativeTarget "AMIDECOUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29EA6991F56F93600456151 /* Debug */,
+				C29EA69A1F56F93600456151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C29EA6621F56F93400456151 /* Project object */;
+}
