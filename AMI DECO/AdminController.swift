@@ -1,40 +1,34 @@
 //
-//  ViewController.swift
-//  AMI DECO
+//  AdminController.swift
+//  AMIDECO
 //
-//  Created by Adonis El Khoury  on 30/08/2017.
+//  Created by Adonis El Khoury  on 03/10/2017.
 //  Copyright © 2017 AS Technology. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class AccueilController: UIViewController {
-    
-    @IBOutlet var Connexion:UIButton!
-    
-    @IBAction func connexion(sender: UIButton!){
-    
-    }
+class AdminController: UIViewController {
     
     
-    @IBOutlet var Inscription:UIButton!
+    @IBOutlet weak var welc: UILabel!
+    var pseudo:String!
+    var mdp:String!
     
-    @IBAction func inscription(sender: UIButton){
-        
-    }
-
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("Bienvenu chez AMI DECO")
-
+            welc.text=pseudo
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-
+      
+    
 }
-
+}
