@@ -7,22 +7,44 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 
 class InscriptionController: UIViewController{
+
     
-    @IBOutlet var dejaIns: UIButton!
+    @IBAction func envoyerInscr(_ sender: UIButton) {
+        print("zobi")
+    }
+    // var ref:DatabaseReference?
+
+    @IBOutlet weak var nom: UITextField!
     
-    @IBOutlet var jeMins:UIButton!
+   
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var pass: UITextField!
+    @IBOutlet weak var prenom: UITextField!
     
-    @IBAction func inscription(sender: UIButton!){
+    /*@IBAction func connexion(sender: UIButton){
         
+    }*/
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+      //  ref=Database.database().reference()
     
-    
-    @IBAction func connexion(sender: UIButton){
-        
     }
-    
+ 
+    /*@IBAction func inscription(sender: UIButton!) {
+       // ref?.child("photos").childByAutoId().setValue("qqc")
+        print("zobi")
+    }
+    /*@IBAction func inscr(_ sender: Any) {
+     
+    }*/*/
     
 }

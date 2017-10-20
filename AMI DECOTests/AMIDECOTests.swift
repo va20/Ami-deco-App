@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import AMI_DECO
+
 
 class AMI_DECOTests: XCTestCase {
     

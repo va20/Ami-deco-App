@@ -18,7 +18,7 @@ class ConnexionController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var adminCont: AdminController=segue.destination as! AdminController
+        let adminCont: AdminController=segue.destination as! AdminController
         
         adminCont.pseudo=email.text
         

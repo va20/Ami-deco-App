@@ -20,7 +20,7 @@
 		C29EA6731F56F93500456151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6711F56F93500456151 /* Main.storyboard */; };
 		C29EA6751F56F93500456151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6741F56F93500456151 /* Assets.xcassets */; };
 		C29EA6781F56F93500456151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29EA6761F56F93500456151 /* LaunchScreen.storyboard */; };
-		C29EA6831F56F93600456151 /* AMI_DECOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA6821F56F93600456151 /* AMI_DECOTests.swift */; };
+		C29EA6831F56F93600456151 /* AMIDECOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA6821F56F93600456151 /* AMIDECOTests.swift */; };
 		C29EA68E1F56F93600456151 /* AMI_DECOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA68D1F56F93600456151 /* AMI_DECOUITests.swift */; };
 		EEA44266F484EB030453AC84 /* Pods_AMIDECO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCD2994157653D48BA4D883 /* Pods_AMIDECO.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		C29EA6771F56F93500456151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C29EA6791F56F93500456151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C29EA67E1F56F93600456151 /* AMIDECOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMIDECOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C29EA6821F56F93600456151 /* AMI_DECOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMI_DECOTests.swift; sourceTree = "<group>"; };
+		C29EA6821F56F93600456151 /* AMIDECOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIDECOTests.swift; sourceTree = "<group>"; };
 		C29EA6841F56F93600456151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C29EA6891F56F93600456151 /* AMIDECOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMIDECOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29EA68D1F56F93600456151 /* AMI_DECOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMI_DECOUITests.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		C29EA6811F56F93600456151 /* AMI DECOTests */ = {
 			isa = PBXGroup;
 			children = (
-				C29EA6821F56F93600456151 /* AMI_DECOTests.swift */,
+				C29EA6821F56F93600456151 /* AMIDECOTests.swift */,
 				C29EA6841F56F93600456151 /* Info.plist */,
 			);
 			path = "AMI DECOTests";
@@ -244,7 +244,7 @@
 				TargetAttributes = {
 					C29EA6691F56F93400456151 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C29EA67D1F56F93600456151 = {
 						CreatedOnToolsVersion = 8.1;
@@ -347,12 +347,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AMIDECO/Pods-AMIDECO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C29EA6831F56F93600456151 /* AMI_DECOTests.swift in Sources */,
+				C29EA6831F56F93600456151 /* AMIDECOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,10 +532,13 @@
 			baseConfigurationReference = E96411FCCC6CE76E93A4B1F8 /* Pods-AMIDECO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AMI DECO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECO";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adonis.AMI-DECO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -541,10 +548,13 @@
 			baseConfigurationReference = 265941B50E46627BDB284FEE /* Pods-AMIDECO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AMI DECO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "adonis.AMI-DECO";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adonis.AMI-DECO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
