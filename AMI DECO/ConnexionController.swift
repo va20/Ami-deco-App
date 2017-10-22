@@ -7,20 +7,54 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class ConnexionController: UIViewController{
  
-    @IBOutlet var email:UITextField!
-    @IBOutlet var mdp:UITextField!
-    
+    var ref:DatabaseReference?
+    @IBOutlet weak var mdp: UITextField!
+    @IBOutlet weak var mail: UITextField!
     var em:String = ""
     var mp:String = ""
     
+    @IBAction func connection(_ sender: UIButton) {
+        guard let email_client = mail.text,
+        email_client != "",
+        let pass_client = mdp.text,
+        pass_client != ""
+            else{
+                AlerteController.showAlert(self, title: "Manque info", message: "Veuillez remplir tout les champs s'il vous plaît")
+                return
+        }
+        Auth.auth().signIn(withEmail: email_client, password: pass_client) { (user, error) in
+            guard error == nil else{
+                AlerteController.showAlert(self, title: "Erreur connexion", message: error!.localizedDescription)
+                return
+            }
+            guard let user = user else { return }
+            print(user.email ?? "Email")
+            print(user.displayName ?? "display name")
+            print(user.uid)
+            
+            //performSegue(withIdentifier: "Singin", sender: nil)
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        ref=Database.database().reference()
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let adminCont: AdminController=segue.destination as! AdminController
         
-        adminCont.pseudo=email.text
+        adminCont.pseudo=mail.text
         
      /*   if segue.identifier == "showAdmin"{
             

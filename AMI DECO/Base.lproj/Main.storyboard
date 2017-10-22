@@ -82,12 +82,25 @@
                                     <color key="titleColor" red="0.15764471760000001" green="0.76667302209999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="connection:" destination="YXJ-gl-bzE" eventType="touchUpInside" id="SIU-Jc-VKd"/>
                                     <segue destination="gK9-2D-JPI" kind="show" identifier="showAdmin" id="z48-t7-f7p"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIE-z5-YpC">
-                                <rect key="frame" x="163" y="540" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oex-dT-XLP">
+                                <rect key="frame" x="128" y="572" width="143" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Inscription">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jtk-wd-frF" kind="show" identifier="showInscrp" id="K0U-QY-5zt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIE-z5-YpC">
+                                <rect key="frame" x="128" y="540" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="Les clients"/>
                                 <connections>
                                     <segue destination="7MZ-86-Atf" kind="show" id="2dP-JG-8OU"/>
@@ -97,10 +110,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="S8d-RQ-mpN"/>
+                    <connections>
+                        <outlet property="mail" destination="bEo-eg-pMq" id="33G-ij-vTW"/>
+                        <outlet property="mdp" destination="yUb-mF-z29" id="wv5-3E-A1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nm-On-grS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359.19999999999999" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="812" y="-88"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fbA-R0-UtB">
@@ -259,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOO-Uq-0wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552.79999999999995" y="682.3088455772114"/>
+            <point key="canvasLocation" x="-92" y="842"/>
         </scene>
         <!--Admin Controller-->
         <scene sceneID="i3G-kB-aTD">
@@ -311,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-V3-luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="695"/>
+            <point key="canvasLocation" x="1306" y="842"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZYf-rA-P8c">
@@ -427,7 +444,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sd-a3-iQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="695"/>
+            <point key="canvasLocation" x="626" y="842"/>
         </scene>
         <!--Accueil Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -487,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="1676" y="-1129"/>
         </scene>
         <!--Inscription Controller-->
         <scene sceneID="GVs-Dl-5rm">
@@ -561,12 +578,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NO-gs-5BH">
-                                <rect key="frame" x="109" y="518" width="101" height="52"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NO-gs-5BH">
+                                <rect key="frame" x="164" y="480" width="101" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Inscription">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="envoyerInscr:" destination="Jtk-wd-frF" eventType="touchUpInside" id="LBP-7c-g0r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BE3-43-WIL">
+                                <rect key="frame" x="166" y="529" width="97" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Connexion">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YXJ-gl-bzE" kind="show" identifier="versConnexion" id="7Dr-Xg-JYG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -581,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgx-ba-Iww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="2489" y="-55"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMQ-YF-RFp">
@@ -606,5 +638,9 @@
         <image name="colorful-heart" width="626" height="619"/>
         <image name="test" width="300" height="233"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Acu-NX-tB0"/>
+        <segue reference="LlA-GG-Upm"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
