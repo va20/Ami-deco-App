@@ -82,8 +82,7 @@
                                     <color key="titleColor" red="0.15764471760000001" green="0.76667302209999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="connection:" destination="YXJ-gl-bzE" eventType="touchUpInside" id="SIU-Jc-VKd"/>
-                                    <segue destination="gK9-2D-JPI" kind="show" identifier="showAdmin" id="z48-t7-f7p"/>
+                                    <action selector="connection:" destination="YXJ-gl-bzE" eventType="touchUpInside" id="Vh4-vc-gMd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oex-dT-XLP">
@@ -102,9 +101,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="Les clients"/>
-                                <connections>
-                                    <segue destination="7MZ-86-Atf" kind="show" id="2dP-JG-8OU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,6 +109,8 @@
                     <connections>
                         <outlet property="mail" destination="bEo-eg-pMq" id="33G-ij-vTW"/>
                         <outlet property="mdp" destination="yUb-mF-z29" id="wv5-3E-A1I"/>
+                        <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="2uu-it-Q7t"/>
+                        <segue destination="7MZ-86-Atf" kind="show" identifier="ClientsController" id="s3S-aU-APc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nm-On-grS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,7 +341,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sd8-J5-Ywh" id="uYz-bS-NTL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
@@ -353,7 +351,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eXj-82-JDP" id="q8v-Go-4dx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="tintColor" red="0.96171465970000003" green="0.92005981429999995" blue="0.35869258069999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -364,7 +362,7 @@
                                 <rect key="frame" x="0.0" y="132" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVq-tr-Fcx" id="hxN-JM-Jxn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
@@ -374,7 +372,7 @@
                                 <rect key="frame" x="0.0" y="192" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Iz-om-IGk" id="Sks-dX-Zld">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
@@ -384,7 +382,7 @@
                                 <rect key="frame" x="0.0" y="252" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xs6-jh-Bal" id="IGC-Lp-wtK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
@@ -394,7 +392,7 @@
                                 <rect key="frame" x="0.0" y="312" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7z-aE-gT9" id="EK7-uo-Nyi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,7 +401,7 @@
                                 <rect key="frame" x="0.0" y="372" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P0f-ZW-zPU" id="AU0-yO-wo3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
@@ -412,7 +410,7 @@
                                 <rect key="frame" x="0.0" y="432" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iqi-WJ-89F" id="Rw6-Wr-wBC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
@@ -421,7 +419,7 @@
                                 <rect key="frame" x="0.0" y="492" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wtl-Vs-5ha" id="FFM-tR-xmf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
@@ -430,7 +428,7 @@
                                 <rect key="frame" x="0.0" y="552" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zlA-da-sxf" id="Rcs-SJ-w3Y">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,7 +477,6 @@
                                 </state>
                                 <connections>
                                     <action selector="connexionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45d-2Q-oj9"/>
-                                    <segue destination="YXJ-gl-bzE" kind="show" identifier="showConnexion" id="LlA-GG-Upm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-gn-b3e">
@@ -489,8 +486,7 @@
                                     <color key="titleColor" red="0.15764471760000001" green="0.76667302209999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="inscriptionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryc-Gh-pz0"/>
-                                    <segue destination="Jtk-wd-frF" kind="show" identifier="showInscription" id="Acu-NX-tB0"/>
+                                    <action selector="inscriptionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcR-F9-VpK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-8s-cBF">
@@ -501,10 +497,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="to5-CH-shN"/>
+                    <connections>
+                        <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="bdk-WF-6IT"/>
+                        <segue destination="Jtk-wd-frF" kind="show" identifier="InscriptionController" id="O3W-3H-Ngg"/>
+                        <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" id="hOl-8E-xGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-1129"/>
+            <point key="canvasLocation" x="1676" y="-1129.385307346327"/>
         </scene>
         <!--Inscription Controller-->
         <scene sceneID="GVs-Dl-5rm">
@@ -609,6 +610,7 @@
                         <outlet property="nom" destination="fpP-ah-pb2" id="Wqe-bo-YSs"/>
                         <outlet property="pass" destination="Ac9-On-ZIO" id="3g6-4H-fKW"/>
                         <outlet property="prenom" destination="33p-1U-lt6" id="75u-Z7-KnF"/>
+                        <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="sQ9-TI-7gi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgx-ba-Iww" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -639,8 +641,9 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Acu-NX-tB0"/>
-        <segue reference="7Dr-Xg-JYG"/>
+        <segue reference="O3W-3H-Ngg"/>
+        <segue reference="bdk-WF-6IT"/>
+        <segue reference="hOl-8E-xGv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -37,21 +37,19 @@ class InscriptionController: UIViewController{
             print(user.email ?? "Email n'existe pas ")
             print(user.uid)
             
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = nom_client+" "+prenom_client
             let info = ["nom":  self.nom.text,
                         "prenom":   self.prenom.text,
                         "email":    self.email.text
-             ]
+            ]
             DatabaseServices.shared.usersRef.child(self.email.text!).setValue(info)
-            
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = nom_client+" "+prenom_client
-            
             changeRequest.commitChanges(completion: {(error) in
                 guard error == nil else{
                     AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
                     return
                 }
-                //self.performSegue(withIdentifier: "espaceClient", sender: nil)
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
             })
         }
         

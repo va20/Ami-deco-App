@@ -15,14 +15,12 @@ class ConnexionController: UIViewController{
     var ref:DatabaseReference?
     @IBOutlet weak var mdp: UITextField!
     @IBOutlet weak var mail: UITextField!
-    var em:String = ""
-    var mp:String = ""
     
     @IBAction func connection(_ sender: UIButton) {
         guard let email_client = mail.text,
-        email_client != "",
-        let pass_client = mdp.text,
-        pass_client != ""
+            email_client != "",
+            let pass_client = mdp.text,
+            pass_client != ""
             else{
                 AlerteController.showAlert(self, title: "Manque info", message: "Veuillez remplir tout les champs s'il vous plaît")
                 return
@@ -36,8 +34,12 @@ class ConnexionController: UIViewController{
             print(user.email ?? "Email")
             print(user.displayName ?? "display name")
             print(user.uid)
-            
-            //performSegue(withIdentifier: "Singin", sender: nil)
+            if(email_client=="ami.deco2@gmail.com"){
+                self.performSegue(withIdentifier: "ClientsController", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            }
         }
     }
     
@@ -50,7 +52,7 @@ class ConnexionController: UIViewController{
         ref=Database.database().reference()
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let adminCont: AdminController=segue.destination as! AdminController
         
@@ -68,6 +70,7 @@ class ConnexionController: UIViewController{
                */
         
             }
-        }
+        }*/
+}
 
 

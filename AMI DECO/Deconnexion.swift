@@ -17,9 +17,9 @@ class Deconnexion: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let username = Auth.auth().currentUser?.displayName else{
-            return
-        }
+        /*guard let username = Auth.auth().currentUser?.displayName else{
+            //return
+        }*/
         //label.text = "Hello \(username)"
     }
     

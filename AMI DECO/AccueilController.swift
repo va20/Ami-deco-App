@@ -7,20 +7,32 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class AccueilController: UIViewController {
     
     @IBOutlet var Connexion:UIButton!
     
     @IBAction func connexion(sender: UIButton!){
-    
+        if Auth.auth().currentUser != nil{
+            self.performSegue(withIdentifier: "AdminController", sender: nil)
+        }
+        else{
+            self.performSegue(withIdentifier: "ConnexionController", sender: nil)
+        }
     }
     
     
     @IBOutlet var Inscription:UIButton!
     
     @IBAction func inscription(sender: UIButton){
-        
+        if Auth.auth().currentUser != nil{
+            self.performSegue(withIdentifier: "AdminController", sender: nil)
+        }
+        else{
+            self.performSegue(withIdentifier: "InscriptionController", sender: nil)
+        }
     }
 
     override func viewDidLoad() {
