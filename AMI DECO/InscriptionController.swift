@@ -43,7 +43,7 @@ class InscriptionController: UIViewController{
                         "prenom":   self.prenom.text,
                         "email":    self.email.text
             ]
-            DatabaseServices.shared.usersRef.child(self.email.text!).setValue(info)
+            //DatabaseServices.shared.usersRef.child(self.email.text!).setValue(info)
             changeRequest.commitChanges(completion: {(error) in
                 guard error == nil else{
                     AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)

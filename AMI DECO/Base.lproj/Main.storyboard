@@ -311,22 +311,35 @@
                                 <state key="normal" title=" Devis"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-Vd-Hlg">
-                                <rect key="frame" x="164" y="97" width="42" height="21"/>
+                                <rect key="frame" x="120" y="97" width="198" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTt-1r-vmv">
+                                <rect key="frame" x="120" y="560" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <state key="normal" title="Deconnexion">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="singout:" destination="gK9-2D-JPI" eventType="touchUpInside" id="7Kl-3N-AaR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="deconnexion" destination="XTt-1r-vmv" id="YNd-FD-gHc"/>
                         <outlet property="welc" destination="GgS-Vd-Hlg" id="idZ-Ko-ncT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="UR0-ka-rA2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-V3-luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="842"/>
+            <point key="canvasLocation" x="1304.8" y="841.52923538230891"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZYf-rA-P8c">
@@ -642,8 +655,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
-        <segue reference="sQ9-TI-7gi"/>
-        <segue reference="7Dr-Xg-JYG"/>
+        <segue reference="UR0-ka-rA2"/>
+        <segue reference="bdk-WF-6IT"/>
+        <segue reference="hOl-8E-xGv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class DatabaseServices{
     
-    static let shared=DatabaseServices()
+    static let shared = DatabaseServices()
     private init(){}
     
     let usersRef = Database.database().reference().child("users")
