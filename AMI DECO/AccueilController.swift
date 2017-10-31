@@ -12,6 +12,11 @@ import FirebaseAuth
 
 class AccueilController: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    
     @IBOutlet var Connexion:UIButton!
     
     @IBAction func connexion(sender: UIButton!){

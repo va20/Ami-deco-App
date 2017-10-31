@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+
+class ClientsController: UIViewController{
     
     var Clients = [Users] ()
     
@@ -20,8 +22,23 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
     
-   
+    
+    @IBOutlet weak var deconnexion: UIButton!
+    
+    @IBAction func singOut(_ sender: UIButton) {
+        do{
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "AccueilController", sender: nil)
+        }catch{
+            print(error)
+        }
+    
+    }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     

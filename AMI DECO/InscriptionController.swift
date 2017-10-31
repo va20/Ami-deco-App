@@ -12,8 +12,28 @@ import FirebaseAuth
 
 
 class InscriptionController: UIViewController{
-
     
+    @IBOutlet weak var nom: UITextField!
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var prenom: UITextField!
+    
+    @IBOutlet weak var pass: UITextField!
+    
+    var ref:DatabaseReference?
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        ref=Database.database().reference()
+        
+    }
     @IBAction func envoyerInscr(_ sender: UIButton) {
         
         guard let nom_client = nom.text,
@@ -28,6 +48,7 @@ class InscriptionController: UIViewController{
                 AlerteController.showAlert(self, title: "Manque info",message: "Veuillez remplir tout les champs s'il vous plaît")
                 return
         }
+        
         Auth.auth().createUser(withEmail: email_client, password: pass_client){ (user, error) in
             guard error == nil else {
                 AlerteController.showAlert(self, title: "Erreur", message: error!.localizedDescription)
@@ -39,40 +60,28 @@ class InscriptionController: UIViewController{
             
             let changeRequest = user.createProfileChangeRequest()
             changeRequest.displayName = nom_client+" "+prenom_client
-            let info = ["nom":  self.nom.text,
-                        "prenom":   self.prenom.text,
-                        "email":    self.email.text
-            ]
-            //DatabaseServices.shared.usersRef.child(self.email.text!).setValue(info)
+
             changeRequest.commitChanges(completion: {(error) in
                 guard error == nil else{
                     AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
                     return
                 }
+                
+                let info = ["nom":  self.nom.text,
+                            "prenom":   self.prenom.text,
+                            "email":    self.email.text
+                ]
+                let mail = ["email":  self.email.text]
+                DatabaseServices.shared.usersRef.child(self.nom.text!+self.prenom.text!).setValue(info)
+                DatabaseServices.shared.accomptRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
+                DatabaseServices.shared.factureRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
+                DatabaseServices.shared.travauxRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
                 self.performSegue(withIdentifier: "AdminController", sender: nil)
             })
         }
         
     }
-    var ref:DatabaseReference?
-
-    @IBOutlet weak var nom: UITextField!
     
-   
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var pass: UITextField!
-    @IBOutlet weak var prenom: UITextField!
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        ref=Database.database().reference()
-    
-    }
     /*func isValidEmail(testStr:String)-> Bool{
         print("validate calendar: \(testStr)")
         let mailRegExp="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

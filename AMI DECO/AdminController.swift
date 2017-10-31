@@ -13,6 +13,10 @@ import Firebase
 class AdminController: UIViewController {
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
     @IBOutlet weak var welc: UILabel!
     //var pseudo:String!
     //var mdp:String!

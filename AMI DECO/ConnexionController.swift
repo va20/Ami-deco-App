@@ -16,6 +16,11 @@ class ConnexionController: UIViewController{
     @IBOutlet weak var mdp: UITextField!
     @IBOutlet weak var mail: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    
     @IBAction func connection(_ sender: UIButton) {
         guard let email_client = mail.text,
             email_client != "",
