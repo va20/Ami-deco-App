@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06700DA1F9AAAF80000096D /* DatabaseServices.swift */; };
+		B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */; };
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
 		B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */; };
 		C215AC701F7A9189001EE1CB /* DevisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215AC6F1F7A9189001EE1CB /* DevisController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		265941B50E46627BDB284FEE /* Pods-AMIDECO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMIDECO.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMIDECO/Pods-AMIDECO.release.xcconfig"; sourceTree = "<group>"; };
 		B06700DA1F9AAAF80000096D /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
+		B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassRecupViewController.swift; sourceTree = "<group>"; };
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
 		C215AC6F1F7A9189001EE1CB /* DevisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				C29EA6761F56F93500456151 /* LaunchScreen.storyboard */,
 				C29EA6711F56F93500456151 /* Main.storyboard */,
 				C282A4551F680A7900E18B2B /* Users.swift */,
+				B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */,
 			);
 			path = "AMI DECO";
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */,
 				C282A4561F680A7900E18B2B /* Users.swift in Sources */,
 				C29EA6701F56F93500456151 /* AccueilController.swift in Sources */,
 				B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */,
