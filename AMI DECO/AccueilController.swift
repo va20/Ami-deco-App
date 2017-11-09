@@ -13,6 +13,14 @@ import FirebaseAuth
 class AccueilController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil{
+            if Auth.auth().currentUser?.email == "ami.deco2@gmail.com" {
+                self.performSegue(withIdentifier: "ClientsController", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            }
+        }
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
@@ -21,7 +29,12 @@ class AccueilController: UIViewController {
     
     @IBAction func connexion(sender: UIButton!){
         if Auth.auth().currentUser != nil{
-            self.performSegue(withIdentifier: "AdminController", sender: nil)
+             if (Auth.auth().currentUser?.email == "ami.deco2@gmail.com") {
+                self.performSegue(withIdentifier: "ClientsController", sender: nil)
+             }
+             else{
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            }
         }
         else{
             self.performSegue(withIdentifier: "ConnexionController", sender: nil)
@@ -33,7 +46,12 @@ class AccueilController: UIViewController {
     
     @IBAction func inscription(sender: UIButton){
         if Auth.auth().currentUser != nil{
-            self.performSegue(withIdentifier: "AdminController", sender: nil)
+            if (Auth.auth().currentUser?.email == "ami.deco2@gmail.com") {
+                self.performSegue(withIdentifier: "ClientsController", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            }
         }
         else{
             self.performSegue(withIdentifier: "InscriptionController", sender: nil)
@@ -44,7 +62,7 @@ class AccueilController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Bienvenu chez AMI DECO")
-
+        
     }
 
     override func didReceiveMemoryWarning() {

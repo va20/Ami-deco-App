@@ -121,12 +121,64 @@
                         <outlet property="mail" destination="bEo-eg-pMq" id="33G-ij-vTW"/>
                         <outlet property="mdp" destination="yUb-mF-z29" id="wv5-3E-A1I"/>
                         <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="2uu-it-Q7t"/>
-                        <segue destination="7MZ-86-Atf" kind="show" identifier="ClientsController" id="s3S-aU-APc"/>
+                        <segue destination="Uun-wX-pzn" kind="show" identifier="ClientsController" id="Is8-HE-fc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nm-On-grS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="-88.605697151424295"/>
+        </scene>
+        <!--Clients Controller-->
+        <scene sceneID="T4m-RB-Pia">
+            <objects>
+                <viewController id="Uun-wX-pzn" customClass="ClientsController" customModule="AMIDECO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="09z-a7-0xu"/>
+                        <viewControllerLayoutGuide type="bottom" id="HBE-3g-ulw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xvd-HP-3BL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-WM-bcm">
+                                <rect key="frame" x="108" y="626" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x6z-pe-nHv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Zwv-1b-4Vn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zwv-1b-4Vn" id="lSH-fc-g8a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.92941176469999998" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uun-wX-pzn" id="KS6-ZK-jRl"/>
+                                    <outlet property="delegate" destination="Uun-wX-pzn" id="h0q-P3-8O3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x6z-pe-nHv" firstAttribute="top" secondItem="xvd-HP-3BL" secondAttribute="top" id="2Yc-p7-WsQ"/>
+                            <constraint firstItem="x6z-pe-nHv" firstAttribute="leading" secondItem="xvd-HP-3BL" secondAttribute="leading" id="8Y3-Y4-Pwt"/>
+                            <constraint firstItem="HBE-3g-ulw" firstAttribute="top" secondItem="x6z-pe-nHv" secondAttribute="bottom" id="LDF-h4-aPC"/>
+                            <constraint firstAttribute="trailing" secondItem="x6z-pe-nHv" secondAttribute="trailing" id="bej-MQ-1qy"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oo3-q9-o2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1202.4000000000001" y="849.62518740629696"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fbA-R0-UtB">
@@ -444,7 +496,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.92941176469999998" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="1Iz-om-IGk">
                                 <rect key="frame" x="0.0" y="148" width="375" height="60"/>
@@ -499,6 +551,19 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wtl-Vs-5ha" id="FFM-tR-xmf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fli-Bg-vRP">
+                                            <rect key="frame" x="0.0" y="7" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                            <state key="normal" title="Deconnexion">
+                                                <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="singOut:" destination="7CV-fx-hvB" eventType="touchUpInside" id="j9f-3i-ppG"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
@@ -506,17 +571,6 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sd-a3-iQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fli-Bg-vRP">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                    <state key="normal" title="Deconnexion">
-                        <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="singOut:" destination="7CV-fx-hvB" eventType="touchUpInside" id="j9f-3i-ppG"/>
-                    </connections>
-                </button>
                 <exit id="7CV-fx-hvB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="626" y="842"/>
@@ -578,6 +632,7 @@
                         <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="bdk-WF-6IT"/>
                         <segue destination="Jtk-wd-frF" kind="show" identifier="InscriptionController" id="O3W-3H-Ngg"/>
                         <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" id="hOl-8E-xGv"/>
+                        <segue destination="Uun-wX-pzn" kind="show" identifier="ClientsController" id="tsS-Ft-hlf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -718,10 +773,11 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K0U-QY-5zt"/>
+        <segue reference="O3W-3H-Ngg"/>
         <segue reference="UR0-ka-rA2"/>
-        <segue reference="sQ9-TI-7gi"/>
-        <segue reference="MqM-bQ-9UM"/>
+        <segue reference="bdk-WF-6IT"/>
+        <segue reference="tsS-Ft-hlf"/>
+        <segue reference="hOl-8E-xGv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -10,13 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 
-class AdminController: UITableViewController {
+class AdminController: UIViewController {
     
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
-                                                           style: .plain, target:self,action:#selector(singout))
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,13 +42,13 @@ class AdminController: UITableViewController {
             print(error)
         }
     }
-    /*override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         guard let user = Auth.auth().currentUser?.displayName else{ return }
         welc.text = "Bonjour \(user)"
         // Do any additional setup after loading the view, typically from a nib.
             //welc.text=pseudo
-    }*/
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -10,22 +10,47 @@ import UIKit
 import FirebaseAuth
 
 
-class ClientsController: UIViewController{
+class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        	self.navigationController?.isNavigationBarHidden=false
+    }
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
+                                                           style: .plain, target:self,action:#selector(singOut))
+    }
     
     var Clients = [Users] ()
     
     let cl = ["salut","bonjour","bonsoir","ntm"]
     
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return cl.count
-        
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 10
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier:"cell")
+        
+        return (cell)
+    }
+    
+    /*public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return cl.count
+        
+    }*/
+    
+    /*override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
-    }
+    }*/
     
     
     @IBOutlet weak var deconnexion: UIButton!
@@ -40,27 +65,14 @@ class ClientsController: UIViewController{
     
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    /*public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     
         let cell = UITableViewCell (style: UITableViewCellStyle.default, reuseIdentifier: "clientsCell")
     
             cell.textLabel?.text=cl[indexPath.row]
         
             return(cell)
-    }
-
-    
-    
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("Bienvenu chez AMI DECO")
-        
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
