@@ -45,10 +45,9 @@ class InscriptionController: UIViewController{
             let pass_client = pass.text,
             pass_client != ""
             else{
-                AlerteController.showAlert(self, title: "Manque info",message: "Veuillez remplir tout les champs s'il vous plaît")
+                AlerteController.showAlert(self, title: "Manque info",message: "Veuillez remplir tous les champs s'il vous plaît")
                 return
         }
-        
         Auth.auth().createUser(withEmail: email_client, password: pass_client){ (user, error) in
             guard error == nil else {
                 AlerteController.showAlert(self, title: "Erreur", message: error!.localizedDescription)
@@ -66,16 +65,15 @@ class InscriptionController: UIViewController{
                     AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
                     return
                 }
-                
                 let info = ["nom":  self.nom.text,
                             "prenom":   self.prenom.text,
                             "email":    self.email.text
                 ]
                 let mail = ["email":  self.email.text]
-                DatabaseServices.shared.usersRef.child(self.nom.text!+self.prenom.text!).setValue(info)
-                DatabaseServices.shared.accomptRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
-                DatabaseServices.shared.factureRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
-                DatabaseServices.shared.travauxRef.child(self.nom.text!+self.prenom.text!).setValue(mail)
+                DatabaseServices.shared.usersRef.child(self.nom.text!+" "+self.prenom.text!).setValue(info)
+                DatabaseServices.shared.accomptRef.child(self.nom.text!+" "+self.prenom.text!).setValue(mail)
+                DatabaseServices.shared.factureRef.child(self.nom.text!+" "+self.prenom.text!).setValue(mail)
+                DatabaseServices.shared.travauxRef.child(self.nom.text!+" "+self.prenom.text!).setValue(mail)
                 self.performSegue(withIdentifier: "AdminController", sender: nil)
             })
         }

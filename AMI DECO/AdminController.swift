@@ -10,8 +10,13 @@ import Foundation
 import UIKit
 import Firebase
 
-class AdminController: UIViewController {
+class AdminController: UITableViewController {
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
+                                                           style: .plain, target:self,action:#selector(singout))
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,6 +30,15 @@ class AdminController: UIViewController {
     @IBOutlet weak var deconnexion: UIButton!
     
     
+    func checkLogin(){
+        if Auth.auth().currentUser?.uid == nil{
+            perform(#selector(singout), with:nil,afterDelay:0)
+        }
+        else{
+            	
+        }
+    }
+    
     @IBAction func singout(_ sender: UIButton) {
         do{
             try Auth.auth().signOut()
@@ -33,13 +47,13 @@ class AdminController: UIViewController {
             print(error)
         }
     }
-    override func viewDidLoad() {
+    /*override func viewDidLoad() {
         super.viewDidLoad()
         guard let user = Auth.auth().currentUser?.displayName else{ return }
         welc.text = "Bonjour \(user)"
         // Do any additional setup after loading the view, typically from a nib.
             //welc.text=pseudo
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -27,7 +27,7 @@ class ConnexionController: UIViewController{
             let pass_client = mdp.text,
             pass_client != ""
             else{
-                AlerteController.showAlert(self, title: "Manque info", message: "Veuillez remplir tout les champs s'il vous plaît")
+                AlerteController.showAlert(self, title: "Manque info", message: "Veuillez remplir tous les champs s'il vous plaît")
                 return
         }
         Auth.auth().signIn(withEmail: email_client, password: pass_client) { (user, error) in

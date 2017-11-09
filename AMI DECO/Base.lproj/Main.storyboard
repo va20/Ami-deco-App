@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -389,6 +389,9 @@
                                 <state key="normal" title="Envoyer">
                                     <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="recover_pass:" destination="kzg-8Z-4vJ" eventType="touchUpInside" id="1oO-L9-mtc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PF-5a-YAp">
                                 <rect key="frame" x="113" y="288" width="129" height="30"/>
@@ -404,6 +407,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="client_email" destination="hG0-u0-Oip" id="sEP-BG-OJW"/>
+                        <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" action="showDetailViewController:sender:" id="MqM-bQ-9UM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIe-zG-l7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,10 +503,6 @@
                                 <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7MZ-86-Atf" id="WMl-oS-yv9"/>
-                            <outlet property="delegate" destination="7MZ-86-Atf" id="NL0-fO-s9X"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sd-a3-iQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -718,7 +721,7 @@
         <segue reference="K0U-QY-5zt"/>
         <segue reference="UR0-ka-rA2"/>
         <segue reference="sQ9-TI-7gi"/>
-        <segue reference="7Dr-Xg-JYG"/>
+        <segue reference="MqM-bQ-9UM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

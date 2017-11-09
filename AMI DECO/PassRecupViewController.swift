@@ -1,4 +1,4 @@
-//
+	//
 //  PassRecupViewController.swift
 //  AMIDECO
 //
@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+    
 
 class PassRecupViewController: UIViewController {
 
+    @IBOutlet weak var client_email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +25,24 @@ class PassRecupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func recover_pass(_ sender: UIButton) {
+        guard let email = client_email.text,
+            email != ""
+            else{
+                AlerteController.showAlert(self, title: "Manque info",message: "Veuillez saisir votre adresse mail s'il vous plaît")
+                return
+        }
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if error == nil{
+                AlerteController.showAlert(self, title: "email envoyé",message: "Un courriel de réinitialisation de mot de passe vient d'être envoyé à votre adresse mail")
+            }
+            else {
+                AlerteController.showAlert(self, title: "Erreur", message: error!.localizedDescription)
+                return
+            }
+            
+        }
+        //self.performSegue(withIdentifier: "ConnexionController", sender: nil)
     }
-    */
 
 }
