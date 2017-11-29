@@ -17,11 +17,10 @@ class AdminController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
+    
+    
     @IBOutlet weak var welc: UILabel!
-    //var pseudo:String!
-    //var mdp:String!
-    
-    
+
     @IBOutlet weak var deconnexion: UIButton!
     
     
@@ -54,6 +53,7 @@ class AdminController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
       
+    }
     
-}
+    
 }

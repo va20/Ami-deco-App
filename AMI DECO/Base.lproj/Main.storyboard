@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -152,7 +152,7 @@
                                         <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="singOut:" destination="Uun-wX-pzn" eventType="touchUpInside" id="JnT-vL-Ean"/>
+                                        <action selector="singOut:" destination="Uun-wX-pzn" eventType="touchUpInside" id="AYa-6O-ZQf"/>
                                     </connections>
                                 </button>
                                 <prototypes>
@@ -282,7 +282,8 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="deconnexion" destination="xEu-WM-bcm" id="f4N-X1-41I"/>
+                        <outlet property="deconnexion" destination="xEu-WM-bcm" id="KeP-lE-kJT"/>
+                        <outlet property="tableView" destination="x6z-pe-nHv" id="3Wk-EV-M4U"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="cWH-pb-nNH"/>
                     </connections>
                 </viewController>
@@ -506,6 +507,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Photos"/>
+                                <connections>
+                                    <segue destination="8y6-aJ-gx4" kind="show" identifier="showPhotoController" id="m5o-D9-lb6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -519,6 +523,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-V3-luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1304.8" y="841.52923538230891"/>
+        </scene>
+        <!--Photo Controller-->
+        <scene sceneID="tQ7-WS-Raa">
+            <objects>
+                <viewController id="8y6-aJ-gx4" customClass="PhotoController" customModule="AMIDECO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IjB-o0-njV"/>
+                        <viewControllerLayoutGuide type="bottom" id="mgh-Vm-pcr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpZ-Ei-uxb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="4WA-gv-IS1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-FV-P7t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Qn-ah-az3">
+                                    <size key="itemSize" width="167" height="137"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="3Vz-TQ-okn" customClass="ImageCollectionViewCell" customModule="AMIDECO">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78D-nc-3Pl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="78D-nc-3Pl" id="jWA-QL-MsB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8y6-aJ-gx4" id="EfD-Qr-1Bm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="hyB-FV-P7t" id="YdC-lL-YV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zs-mI-xtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304.8" y="1685.3073463268368"/>
         </scene>
         <!--Pass Recup View Controller-->
         <scene sceneID="0JB-Bt-z1V">
@@ -890,7 +954,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
-        <segue reference="cWH-pb-nNH"/>
+        <segue reference="UR0-ka-rA2"/>
         <segue reference="sQ9-TI-7gi"/>
         <segue reference="tsS-Ft-hlf"/>
         <segue reference="7Dr-Xg-JYG"/>

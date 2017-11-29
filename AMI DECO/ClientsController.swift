@@ -44,6 +44,7 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
         let cell = UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier:"cell")
         let user = users[indexPath.row]
         cell.textLabel?.text = user.nom!+" "+user.prenom!
+        cell.detailTextLabel?.text = user.email
         return cell
     }
 
@@ -75,13 +76,14 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
                 let user = User()
                 user.setValuesForKeys(dictionnaire)
                 self.users.append(user)
-                DispatchQueue(DispatchQueue.main,{
-                    tableView.reloadData()
-                })
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
                 
             }
-        }, withCancel: nil)
-    }
+                
+            }, withCancel: nil)
+        }
     
     
     override func didReceiveMemoryWarning() {
