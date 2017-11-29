@@ -7,21 +7,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
 
 
 class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    /*override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         	self.navigationController?.isNavigationBarHidden=false
-    }
+    }*/
     
+    var users=[User]()
     override func viewDidLoad(){
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
                                                            style: .plain, target:self,action:#selector(singOut))
+        user_list()
     }
     
     var Clients = [Users] ()
@@ -31,21 +35,18 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 10
+        return users.count
     }
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier:"cell")
-        
-        return (cell)
+        let user = users[indexPath.row]
+        cell.textLabel?.text = user.nom!+" "+user.prenom!
+        return cell
     }
-    
-    /*public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return cl.count
-        
-    }*/
+
     
     /*override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,8 +54,9 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
     }*/
     
     
-    @IBOutlet weak var deconnexion: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var deconnexion: UIButton!
     @IBAction func singOut(_ sender: UIButton) {
         do{
             try Auth.auth().signOut()
@@ -65,14 +67,22 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     }
     
-    /*public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     
-        let cell = UITableViewCell (style: UITableViewCellStyle.default, reuseIdentifier: "clientsCell")
+    func user_list(){
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            //print(snapshot)
+            if let dictionnaire = snapshot.value as? [String: AnyObject]{
+                let user = User()
+                user.setValuesForKeys(dictionnaire)
+                self.users.append(user)
+                DispatchQueue(DispatchQueue.main,{
+                    tableView.reloadData()
+                })
+                
+            }
+        }, withCancel: nil)
+    }
     
-            cell.textLabel?.text=cl[indexPath.row]
-        
-            return(cell)
-    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
