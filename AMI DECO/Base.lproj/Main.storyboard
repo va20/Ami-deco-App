@@ -536,13 +536,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="4WA-gv-IS1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-FV-P7t">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-FV-P7t">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Qn-ah-az3">
                                     <size key="itemSize" width="167" height="137"/>
@@ -558,7 +553,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78D-nc-3Pl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78D-nc-3Pl">
                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -571,10 +566,28 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="8y6-aJ-gx4" id="EfD-Qr-1Bm"/>
+                                    <outlet property="delegate" destination="8y6-aJ-gx4" id="sWr-DC-c2L"/>
                                 </connections>
                             </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-Gg-VGL">
+                                <rect key="frame" x="0.0" y="596" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="sEV-6r-ofv">
+                                        <connections>
+                                            <action selector="loadImage:" destination="8y6-aJ-gx4" id="Im4-Aa-D3g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hyB-FV-P7t" secondAttribute="trailing" id="PjT-vk-jTf"/>
+                            <constraint firstItem="hyB-FV-P7t" firstAttribute="leading" secondItem="wpZ-Ei-uxb" secondAttribute="leading" id="Wuf-D4-1vj"/>
+                            <constraint firstItem="mgh-Vm-pcr" firstAttribute="top" secondItem="hyB-FV-P7t" secondAttribute="bottom" constant="149" id="m2a-hg-BM9"/>
+                            <constraint firstItem="hyB-FV-P7t" firstAttribute="top" secondItem="IjB-o0-njV" secondAttribute="bottom" constant="-20" id="sdu-dp-nYf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="hyB-FV-P7t" id="YdC-lL-YV6"/>
@@ -953,10 +966,10 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O3W-3H-Ngg"/>
+        <segue reference="K0U-QY-5zt"/>
         <segue reference="UR0-ka-rA2"/>
-        <segue reference="sQ9-TI-7gi"/>
-        <segue reference="tsS-Ft-hlf"/>
+        <segue reference="2uu-it-Q7t"/>
+        <segue reference="Is8-HE-fc5"/>
         <segue reference="7Dr-Xg-JYG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
