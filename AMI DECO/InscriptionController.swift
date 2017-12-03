@@ -54,8 +54,8 @@ class InscriptionController: UIViewController{
                 return
             }
             guard let user = user else{ return }
-            print(user.email ?? "Email n'existe pas ")
-            print(user.uid)
+            //print(user.email ?? "Email n'existe pas ")
+            //print(user.uid)
             
             let changeRequest = user.createProfileChangeRequest()
             changeRequest.displayName = nom_client+" "+prenom_client
@@ -70,11 +70,13 @@ class InscriptionController: UIViewController{
                             "email":    self.email.text
                 ]
                 let mail = ["email":  self.email.text]
-                DatabaseServices.shared.usersRef.child(self.nom.text!+" "+self.prenom.text!).setValue(info)
-                DatabaseServices.shared.accomptRef.child(self.nom.text!+" "+self.prenom.text!).setValue(mail)
-                DatabaseServices.shared.factureRef.child(self.nom.text!+" "+self.prenom.text!).setValue(mail)
-                DatabaseServices.shared.travauxRef.child(self.nom.text!+" "+self.prenom.text!+self.randomString(10))
-                DatabaseServices.shared.photoRef.child(self.nom.text!+" "+self.prenom.text!+self.self.randomString(10))
+                let key = self.makeFirebaseString()
+                print(key)
+                DatabaseServices.shared.usersRef.child(key).setValue(info)
+                DatabaseServices.shared.accomptRef.child(key).setValue(mail)
+                DatabaseServices.shared.factureRef.child(key).setValue(mail)
+                DatabaseServices.shared.travauxRef.child(key).setValue(mail)
+                DatabaseServices.shared.photoRef.child(key).setValue(mail)
                 self.performSegue(withIdentifier: "AdminController", sender: nil)
             })
         }
@@ -101,4 +103,15 @@ class InscriptionController: UIViewController{
         let emailTest = NSPredicate(format:"SELF MATCHES %@", mailRegExp)
         return emailTest.evaluate(with: testStr)
     }*/
+    
+    func makeFirebaseString()->String{
+        let arrCharacterToReplace = [".","#","$","[","]"]
+        var finalString = self.email.text
+        
+        for character in arrCharacterToReplace{
+            finalString = finalString?.replacingOccurrences(of: character, with: ",")
+        }
+        
+        return finalString!
+    }
 }

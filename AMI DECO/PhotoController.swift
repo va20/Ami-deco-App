@@ -9,10 +9,14 @@
 import UIKit
 import FirebaseStorage
 import SDWebImage
+import FirebaseDatabase
+import FirebaseAuth
 
 class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     var customFlowImageLayout: CollectionViewFlowLayout!
-    var images = [UIImage]()
+    var images = [ImageProperties]()
+    
+    //var dbRef: DatabaseServices!
     
     let imagePicker = UIImagePickerController()
     
@@ -20,10 +24,12 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         imagePicker.delegate = self
         imageCharge()
         customFlowImageLayout = CollectionViewFlowLayout()
         collectionView.collectionViewLayout = customFlowImageLayout
+        collectionView.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
@@ -49,11 +55,13 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                 print(downloadURL!.absoluteString)
                 
                 //mise a jour l'url dans la base de donnée
-                let key = DatabaseServices.shared.accomptRef.child("alqasaif").key
+                print(Auth.auth().currentUser?.email!)
+                let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
+                print("child :"+child)
+                let key = DatabaseServices.shared.usersRef.child(child).childByAutoId().key
                 let image = ["url": downloadURL?.absoluteString]
                 let childUpdate = ["/\(key)":image]
-                DatabaseServices.shared.accomptRef.updateChildValues(childUpdate)
-                
+                DatabaseServices.shared.usersRef.child(child).updateChildValues(childUpdate)
             }
         }
         
@@ -80,14 +88,18 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     }
     
     public func imageCharge(){
-        images.append(UIImage(named: "colorful-heart")!)
-        images.append(UIImage(named: "colorful-heart")!)
-        images.append(UIImage(named: "colorful-heart")!)
-        images.append(UIImage(named: "colorful-heart")!)
-        images.append(UIImage(named: "colorful-heart")!)
-        images.append(UIImage(named: "colorful-heart")!)
-
-        self.collectionView.reloadData()
+        let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
+        DatabaseServices.shared.usersRef.child(child).observe(DataEventType.value,with: { (snapshot) in
+            var newImage = [ImageProperties]()
+            
+            for imagePropertiesSnapshot in snapshot.children{
+                let imagePropObject = ImageProperties(snapshot: imagePropertiesSnapshot as! DataSnapshot)
+                newImage.append(imagePropObject)
+            }
+            
+            self.images = newImage;
+            self.collectionView.reloadData()
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,11 +116,21 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         
         let image = images[indexPath.row]
         
-        cell.imageView.image = image
+        cell.imageView.sd_setImage(with: URL(string: image.url), placeholderImage: UIImage(named: "image"))
         
         return cell
         
     }
     
+    func makeFirebaseString(_ email: String) -> String{
+        let arrCharacterToReplace = [".","#","$","[","]"]
+        var finalString = email
+        
+        for character in arrCharacterToReplace{
+            finalString = finalString.replacingOccurrences(of: character, with: ",")
+        }
+        
+        return finalString
+    }
     
 }

@@ -10,6 +10,7 @@
 		B05694A01FCF23EF00393DFD /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056949F1FCF23EE00393DFD /* PhotoController.swift */; };
 		B05694A21FCF45C100393DFD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A11FCF45C100393DFD /* ImageCollectionViewCell.swift */; };
 		B05694A41FD029DF00393DFD /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */; };
+		B05694A61FD0C36000393DFD /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A51FD0C36000393DFD /* ImageProperties.swift */; };
 		B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06700DA1F9AAAF80000096D /* DatabaseServices.swift */; };
 		B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */; };
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
@@ -55,6 +56,7 @@
 		B056949F1FCF23EE00393DFD /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		B05694A11FCF45C100393DFD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		B05694A51FD0C36000393DFD /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		B06700DA1F9AAAF80000096D /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
 		B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassRecupViewController.swift; sourceTree = "<group>"; };
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B056949F1FCF23EE00393DFD /* PhotoController.swift */,
 				B05694A11FCF45C100393DFD /* ImageCollectionViewCell.swift */,
 				B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */,
+				B05694A51FD0C36000393DFD /* ImageProperties.swift */,
 			);
 			path = "AMI DECO";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */,
 				B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */,
 				B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */,
+				B05694A61FD0C36000393DFD /* ImageProperties.swift in Sources */,
 				B0ABBD2E1FCE232A00DF0E4C /* User.swift in Sources */,
 				C24B9A921F74186A0082C426 /* ClientsController.swift in Sources */,
 				B05694A41FD029DF00393DFD /* CollectionViewFlowLayout.swift in Sources */,
