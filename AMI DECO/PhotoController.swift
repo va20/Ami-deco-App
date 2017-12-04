@@ -16,8 +16,6 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     var customFlowImageLayout: CollectionViewFlowLayout!
     var images = [ImageProperties]()
     
-    //var dbRef: DatabaseServices!
-    
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -32,6 +30,12 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         collectionView.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(false, animated:false)
+    }
+    
     
     @objc func imagePickerController(_ : UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         dismiss(animated: true, completion: nil)
@@ -131,6 +135,12 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         }
         
         return finalString
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
 }
