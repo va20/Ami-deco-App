@@ -285,6 +285,7 @@
                         <outlet property="deconnexion" destination="xEu-WM-bcm" id="KeP-lE-kJT"/>
                         <outlet property="tableView" destination="x6z-pe-nHv" id="3Wk-EV-M4U"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="cWH-pb-nNH"/>
+                        <segue destination="gK9-2D-JPI" kind="show" identifier="info" id="aP2-VC-YvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oo3-q9-o2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,10 +304,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-qf-BIv">
-                                <rect key="frame" x="-22" y="0.0" width="397" height="659"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nh1-zj-hRQ">
                                 <rect key="frame" x="178" y="147" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -440,6 +437,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-qf-BIv">
+                                <rect key="frame" x="-11" y="4" width="397" height="659"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -448,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOO-Uq-0wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="842"/>
+            <point key="canvasLocation" x="-1943" y="1657"/>
         </scene>
         <!--Admin Controller-->
         <scene sceneID="i3G-kB-aTD">
@@ -554,7 +555,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78D-nc-3Pl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
+                                                    <rect key="frame" x="0.0" y="43" width="167" height="137"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -569,17 +570,24 @@
                                     <outlet property="delegate" destination="8y6-aJ-gx4" id="sWr-DC-c2L"/>
                                 </connections>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-Gg-VGL">
-                                <rect key="frame" x="0.0" y="596" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-Zb-2fe">
+                                <rect key="frame" x="0.0" y="18" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="add" id="sEV-6r-ofv">
-                                        <connections>
-                                            <action selector="loadImage:" destination="8y6-aJ-gx4" id="Im4-Aa-D3g"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <navigationItem title="Photos" id="RNU-nj-D5p">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="yqK-qD-wfb">
+                                            <connections>
+                                                <segue destination="gK9-2D-JPI" kind="show" identifier="showAdminController" id="Iwf-gw-JSp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xob-vB-9ze">
+                                            <connections>
+                                                <action selector="loadImage:" destination="8y6-aJ-gx4" id="GlD-zY-8pr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
-                            </toolbar>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -766,7 +774,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sd-a3-iQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7CV-fx-hvB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="626" y="842"/>
+            <point key="canvasLocation" x="-1314" y="1657"/>
         </scene>
         <!--Accueil Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -962,15 +970,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="16" height="16"/>
         <image name="colorful-heart" width="626" height="619"/>
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K0U-QY-5zt"/>
-        <segue reference="UR0-ka-rA2"/>
-        <segue reference="sQ9-TI-7gi"/>
-        <segue reference="Is8-HE-fc5"/>
-        <segue reference="7Dr-Xg-JYG"/>
+        <segue reference="O3W-3H-Ngg"/>
+        <segue reference="cWH-pb-nNH"/>
+        <segue reference="aP2-VC-YvM"/>
+        <segue reference="tsS-Ft-hlf"/>
+        <segue reference="hOl-8E-xGv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

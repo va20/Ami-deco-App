@@ -59,13 +59,23 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                 print(downloadURL!.absoluteString)
                 
                 //mise a jour l'url dans la base de donnée
-                print(Auth.auth().currentUser?.email!)
-                let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
-                print("child :"+child)
-                let key = DatabaseServices.shared.usersRef.child(child).childByAutoId().key
-                let image = ["url": downloadURL?.absoluteString]
-                let childUpdate = ["/\(key)":image]
-                DatabaseServices.shared.usersRef.child(child).updateChildValues(childUpdate)
+                if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+                    let user = users[Myindex]
+                    let child_user = self.makeFirebaseString(user.email!)
+                    print("child ami DECOO:"+child_user)
+                    let key_user = DatabaseServices.shared.photoRef.child(child_user).childByAutoId().key
+                    let image_user = ["url": downloadURL?.absoluteString]
+                    let childUpdate_user = ["/\(key_user)":image_user]
+                    DatabaseServices.shared.photoRef.child(child_user).updateChildValues(childUpdate_user)
+                }
+                else if(Auth.auth().currentUser?.email != "ami.deco2@gmail.com"){
+                    let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
+                    print("child :"+child)
+                    let key = DatabaseServices.shared.photoRef.child(child).childByAutoId().key
+                    let image = ["url": downloadURL?.absoluteString]
+                    let childUpdate = ["/\(key)":image]
+                    DatabaseServices.shared.photoRef.child(child).updateChildValues(childUpdate)
+                }
             }
         }
         
@@ -92,8 +102,15 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     }
     
     public func imageCharge(){
-        let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
-        DatabaseServices.shared.usersRef.child(child).observe(DataEventType.value,with: { (snapshot) in
+        var child=""
+        if(Auth.auth().currentUser?.email! == "ami.deco2@gmail.com"){
+            let user = users[Myindex]
+            child = self.makeFirebaseString(user.email!)
+        }
+        else if(Auth.auth().currentUser?.email! != "ami.deco2@gmail.com"){
+            child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
+        }
+        DatabaseServices.shared.photoRef.child(child).observe(DataEventType.value,with: { (snapshot) in
             var newImage = [ImageProperties]()
             
             for imagePropertiesSnapshot in snapshot.children{

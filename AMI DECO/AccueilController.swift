@@ -13,14 +13,6 @@ import FirebaseAuth
 class AccueilController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil{
-            if Auth.auth().currentUser?.email == "ami.deco2@gmail.com" {
-                self.performSegue(withIdentifier: "ClientsController", sender: nil)
-            }
-            else{
-                self.performSegue(withIdentifier: "AdminController", sender: nil)
-            }
-        }
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
@@ -62,6 +54,14 @@ class AccueilController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Bienvenu chez AMI DECO")
+        if (Auth.auth().currentUser != nil){
+            if (Auth.auth().currentUser?.email == "ami.deco2@gmail.com") {
+                self.performSegue(withIdentifier: "ClientsController", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            }
+        }
         
     }
 

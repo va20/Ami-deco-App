@@ -43,10 +43,16 @@ class AdminController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = Auth.auth().currentUser?.displayName else{ return }
-        welc.text = "Bonjour \(user)"
-        // Do any additional setup after loading the view, typically from a nib.
+        if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+            let user = users[Myindex]
+            welc.text = "Bonjour "+user.nom!+" "+user.prenom!
+        }
+        else{
+            guard let user = Auth.auth().currentUser?.displayName else{ return }
+            welc.text = "Bonjour \(user)"
+            // Do any additional setup after loading the view, typically from a nib.
             //welc.text=pseudo
+        }
     }
     
     override func didReceiveMemoryWarning() {

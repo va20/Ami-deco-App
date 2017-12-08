@@ -11,6 +11,9 @@ import FirebaseDatabase
 import FirebaseAuth
 
 
+var Myindex = 0
+var users=[User]()
+
 class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     
@@ -20,19 +23,19 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
         	self.navigationController?.isNavigationBarHidden=false
     }*/
     
-    var users=[User]()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
                                                            style: .plain, target:self,action:#selector(singOut))
+        Myindex = 0
+        users.removeAll()
         user_list()
     }
     
     var Clients = [Users] ()
     
-    let cl = ["salut","bonjour","bonsoir","ntm"]
-    
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return users.count
@@ -44,10 +47,14 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
         let cell = UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier:"cell")
         let user = users[indexPath.row]
         cell.textLabel?.text = user.nom!+" "+user.prenom!
-        cell.detailTextLabel?.text = user.email
+        cell.detailTextLabel?.text = user.email!
         return cell
     }
 
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Myindex = indexPath.row
+        performSegue(withIdentifier: "info", sender: self)
+    }
     
     /*override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -75,7 +82,7 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
             if let dictionnaire = snapshot.value as? [String: AnyObject]{
                 let user = User()
                 user.setValuesForKeys(dictionnaire)
-                self.users.append(user)
+                users.append(user)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
