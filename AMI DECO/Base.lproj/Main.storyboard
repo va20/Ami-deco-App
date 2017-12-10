@@ -9,6 +9,82 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Ami Controller-->
+        <scene sceneID="eGq-zc-J1O">
+            <objects>
+                <viewController id="l8k-hF-f8H" customClass="AmiController" customModule="AMIDECO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mvG-C9-chO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z7u-zl-FD1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="79A-Ja-hY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-N3-0HB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I53-O3-eLC">
+                                <rect key="frame" x="0.0" y="43" width="375" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Faire un devis"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgL-hD-faW">
+                                <rect key="frame" x="0.0" y="317" width="375" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Mes clients"/>
+                                <connections>
+                                    <segue destination="Uun-wX-pzn" kind="show" identifier="show_clients" id="4Sy-Mu-vVk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-1e-AG5">
+                                <rect key="frame" x="0.0" y="403" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Mes documents"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-qO-BSH">
+                                <rect key="frame" x="0.0" y="138" width="375" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Faire un accompte"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i44-eq-Doa">
+                                <rect key="frame" x="0.0" y="224" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Faire une facture"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmq-EW-lCI">
+                                <rect key="frame" x="0.0" y="550" width="375" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Deconnexion">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="l8k-hF-f8H" eventType="touchUpInside" id="IqC-E5-sc8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="deconnexion" destination="dmq-EW-lCI" id="Ias-tv-eUl"/>
+                        <outlet property="faire_accompt" destination="DNN-qO-BSH" id="NLR-uW-Axn"/>
+                        <outlet property="faire_devis" destination="I53-O3-eLC" id="crp-Fh-gxa"/>
+                        <outlet property="faire_facture" destination="i44-eq-Doa" id="hNO-Wd-wqc"/>
+                        <outlet property="mesClients" destination="pgL-hD-faW" id="weJ-Bh-mlr"/>
+                        <outlet property="mesDocuments" destination="sSh-1e-AG5" id="avi-Ju-onz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ths-Oy-QBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-844" y="-287.40629685157421"/>
+        </scene>
         <!--Connexion Controller-->
         <scene sceneID="xYl-xI-g9Z">
             <objects>
@@ -121,7 +197,7 @@
                         <outlet property="mail" destination="bEo-eg-pMq" id="33G-ij-vTW"/>
                         <outlet property="mdp" destination="yUb-mF-z29" id="wv5-3E-A1I"/>
                         <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="2uu-it-Q7t"/>
-                        <segue destination="Uun-wX-pzn" kind="show" identifier="ClientsController" id="Is8-HE-fc5"/>
+                        <segue destination="l8k-hF-f8H" kind="show" identifier="ClientsController" id="AKk-w4-P9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nm-On-grS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,6 +347,15 @@
                                     <outlet property="delegate" destination="Uun-wX-pzn" id="h0q-P3-8O3"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIw-hT-rRp">
+                                <rect key="frame" x="0.0" y="20" width="62" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <segue destination="l8k-hF-f8H" kind="show" identifier="show_ami" id="0JK-T6-R33"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -468,32 +553,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlW-eQ-Rsk">
-                                <rect key="frame" x="120" y="270" width="131" height="38"/>
+                                <rect key="frame" x="0.0" y="243" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Factures"/>
+                                <state key="normal" title="Mes factures"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-0M-XgK">
-                                <rect key="frame" x="100" y="339" width="174" height="52"/>
+                                <rect key="frame" x="0.0" y="316" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title=" Accomptes"/>
+                                <state key="normal" title="Mes accomptes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r5-Ae-aJP">
-                                <rect key="frame" x="135" y="187" width="100" height="48"/>
+                                <rect key="frame" x="0.0" y="166" width="374" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title=" Devis"/>
+                                <state key="normal" title="Mes devis"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-Vd-Hlg">
-                                <rect key="frame" x="120" y="97" width="198" height="21"/>
+                                <rect key="frame" x="0.0" y="117" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTt-1r-vmv">
-                                <rect key="frame" x="120" y="560" width="137" height="30"/>
+                                <rect key="frame" x="-1" y="513" width="376" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                 <state key="normal" title="Deconnexion">
@@ -504,19 +589,53 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-bk-D2c">
-                                <rect key="frame" x="111" y="418" width="152" height="30"/>
+                                <rect key="frame" x="-1" y="399" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Photos"/>
+                                <state key="normal" title="Mes photos"/>
                                 <connections>
                                     <segue destination="8y6-aJ-gx4" kind="show" identifier="showPhotoController" id="m5o-D9-lb6"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-o5-n18">
+                                <rect key="frame" x="-1" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Espace client" id="bNf-ND-ogh">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" style="plain" id="uzc-pp-eXv">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJh-gO-NOJ">
+                                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Retour"/>
+                                                <connections>
+                                                    <segue destination="Uun-wX-pzn" kind="show" id="w5N-0M-gIN"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="back_action:" destination="gK9-2D-JPI" id="7I4-zu-1O3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-q9-cWE">
+                                <rect key="frame" x="-1" y="607" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Supprimer cet utilisateur">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="delete_user:" destination="gK9-2D-JPI" eventType="touchUpInside" id="7no-Qs-uF9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="back_button" destination="uzc-pp-eXv" id="nH5-ZG-2co"/>
                         <outlet property="deconnexion" destination="XTt-1r-vmv" id="YNd-FD-gHc"/>
+                        <outlet property="supprimer" destination="gRE-q9-cWE" id="KcV-38-ahb"/>
                         <outlet property="welc" destination="GgS-Vd-Hlg" id="idZ-Ko-ncT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="UR0-ka-rA2"/>
                     </connections>
@@ -598,6 +717,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="add_photo" destination="xob-vB-9ze" id="byK-kI-rUc"/>
                         <outlet property="collectionView" destination="hyB-FV-P7t" id="YdC-lL-YV6"/>
                     </connections>
                 </viewController>
@@ -833,7 +953,7 @@
                         <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="bdk-WF-6IT"/>
                         <segue destination="Jtk-wd-frF" kind="show" identifier="InscriptionController" id="O3W-3H-Ngg"/>
                         <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" id="hOl-8E-xGv"/>
-                        <segue destination="Uun-wX-pzn" kind="show" identifier="ClientsController" id="tsS-Ft-hlf"/>
+                        <segue destination="l8k-hF-f8H" kind="show" identifier="ClientsController" id="v2h-4W-wYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -950,24 +1070,6 @@
             </objects>
             <point key="canvasLocation" x="2489" y="-55"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bMQ-YF-RFp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mrh-7C-Iim" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8B9-wV-y4b">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bX5-0y-GvO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8x0-lQ-2IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-580" y="-36.431784107946029"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Back" width="16" height="16"/>
@@ -975,11 +1077,12 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O3W-3H-Ngg"/>
+        <segue reference="K0U-QY-5zt"/>
         <segue reference="cWH-pb-nNH"/>
         <segue reference="aP2-VC-YvM"/>
-        <segue reference="tsS-Ft-hlf"/>
+        <segue reference="w5N-0M-gIN"/>
         <segue reference="hOl-8E-xGv"/>
+        <segue reference="0JK-T6-R33"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -13,6 +13,10 @@ import Firebase
 class AdminController: UIViewController {
     
     
+    @IBOutlet weak var back_button: UIBarButtonItem!
+    
+    @IBOutlet weak var supprimer: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -22,6 +26,13 @@ class AdminController: UIViewController {
     @IBOutlet weak var welc: UILabel!
 
     @IBOutlet weak var deconnexion: UIButton!
+    
+    
+    
+    @IBAction func delete_user(_ sender: UIButton) {
+        
+        
+    }
     
     
     func checkLogin(){
@@ -46,10 +57,17 @@ class AdminController: UIViewController {
         if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
             let user = users[Myindex]
             welc.text = "Bonjour "+user.nom!+" "+user.prenom!
+            //self.back_button.accessibilityElementsHidden=false
+            self.back_button.isEnabled=true
+            self.supprimer.isHidden = false
+
         }
         else{
             guard let user = Auth.auth().currentUser?.displayName else{ return }
             welc.text = "Bonjour \(user)"
+            //self.back_button.accessibilityElementsHidden=false
+            self.back_button.isEnabled=false
+            self.supprimer.isHidden = true
             // Do any additional setup after loading the view, typically from a nib.
             //welc.text=pseudo
         }

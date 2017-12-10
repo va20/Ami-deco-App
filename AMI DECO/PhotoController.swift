@@ -20,9 +20,17 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    @IBOutlet weak var add_photo: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+            self.add_photo.isEnabled=true
+        }
+        else if(Auth.auth().currentUser?.email != "ami.deco2@gmail.com"){
+            self.add_photo.isEnabled=false
+        }
         imagePicker.delegate = self
         imageCharge()
         customFlowImageLayout = CollectionViewFlowLayout()
@@ -38,43 +46,37 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     
     
     @objc func imagePickerController(_ : UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
-        dismiss(animated: true, completion: nil)
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            //les donnes dans la memoire
-            var data = Data()
-            data = UIImageJPEGRepresentation(pickedImage, 0.8)!
-            
-            //cree une reference vers le fichier qu'on veut uploader
-            
-            let imageRef = Storage.storage().reference().child("images/" + randomString(20))
-        
-            //uploader le fichier au images/randomString
-            _ = imageRef.putData(data, metadata: nil) { (metadata,error) in
-                guard let metadata = metadata else {
-                    return
-                }
-                //metadata contient des informations sur le fichier uploader
-                let downloadURL = metadata.downloadURL()
-                print(downloadURL!)
-                print(downloadURL!.absoluteString)
+        if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+            dismiss(animated: true, completion: nil)
+            if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+                //les donnes dans la memoire
+                var data = Data()
+                data = UIImageJPEGRepresentation(pickedImage, 0.8)!
                 
-                //mise a jour l'url dans la base de donnée
-                if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
-                    let user = users[Myindex]
-                    let child_user = self.makeFirebaseString(user.email!)
-                    print("child ami DECOO:"+child_user)
-                    let key_user = DatabaseServices.shared.photoRef.child(child_user).childByAutoId().key
-                    let image_user = ["url": downloadURL?.absoluteString]
-                    let childUpdate_user = ["/\(key_user)":image_user]
-                    DatabaseServices.shared.photoRef.child(child_user).updateChildValues(childUpdate_user)
-                }
-                else if(Auth.auth().currentUser?.email != "ami.deco2@gmail.com"){
-                    let child = self.makeFirebaseString((Auth.auth().currentUser?.email!)!)
-                    print("child :"+child)
-                    let key = DatabaseServices.shared.photoRef.child(child).childByAutoId().key
-                    let image = ["url": downloadURL?.absoluteString]
-                    let childUpdate = ["/\(key)":image]
-                    DatabaseServices.shared.photoRef.child(child).updateChildValues(childUpdate)
+                //cree une reference vers le fichier qu'on veut uploader
+                
+                let imageRef = Storage.storage().reference().child("images/" + randomString(20))
+            
+                //uploader le fichier au images/randomString
+                _ = imageRef.putData(data, metadata: nil) { (metadata,error) in
+                    guard let metadata = metadata else {
+                        return
+                    }
+                    //metadata contient des informations sur le fichier uploader
+                    let downloadURL = metadata.downloadURL()
+                    print(downloadURL!)
+                    print(downloadURL!.absoluteString)
+                    
+                    //mise a jour l'url dans la base de donnée
+                    if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+                        let user = users[Myindex]
+                        let child_user = self.makeFirebaseString(user.email!)
+                        print("child ami DECOO:"+child_user)
+                        let key_user = DatabaseServices.shared.photoRef.child(child_user).childByAutoId().key
+                        let image_user = ["url": downloadURL?.absoluteString]
+                        let childUpdate_user = ["/\(key_user)":image_user]
+                        DatabaseServices.shared.photoRef.child(child_user).updateChildValues(childUpdate_user)
+                    }
                 }
             }
         }
