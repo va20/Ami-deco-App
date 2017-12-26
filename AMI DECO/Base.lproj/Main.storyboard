@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,6 +79,7 @@
                         <outlet property="faire_facture" destination="i44-eq-Doa" id="hNO-Wd-wqc"/>
                         <outlet property="mesClients" destination="pgL-hD-faW" id="weJ-Bh-mlr"/>
                         <outlet property="mesDocuments" destination="sSh-1e-AG5" id="avi-Ju-onz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="IQT-pp-gmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ths-Oy-QBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1078,9 +1079,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K0U-QY-5zt"/>
-        <segue reference="cWH-pb-nNH"/>
+        <segue reference="IQT-pp-gmy"/>
         <segue reference="aP2-VC-YvM"/>
-        <segue reference="w5N-0M-gIN"/>
+        <segue reference="4Sy-Mu-vVk"/>
         <segue reference="hOl-8E-xGv"/>
         <segue reference="0JK-T6-R33"/>
     </inferredMetricsTieBreakers>
