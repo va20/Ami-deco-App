@@ -17,6 +17,11 @@
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
 		B0ABBD2E1FCE232A00DF0E4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABBD2D1FCE232900DF0E4C /* User.swift */; };
 		B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */; };
+		B0EAAFD71FF5305D00B77971 /* DevisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD61FF5305D00B77971 /* DevisController.swift */; };
+		B0EAAFD91FF530E000B77971 /* elementDevis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD81FF530E000B77971 /* elementDevis.swift */; };
+		B0EAAFDB1FF5312800B77971 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFDA1FF5312800B77971 /* PreviewViewController.swift */; };
+		B0EAAFDD1FF531C000B77971 /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFDC1FF531C000B77971 /* CustomPrintPageRenderer.swift */; };
+		B0EAAFDF1FF531FB00B77971 /* DevisComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFDE1FF531FB00B77971 /* DevisComposer.swift */; };
 		C215AC721F842948001EE1CB /* AdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215AC711F842948001EE1CB /* AdminController.swift */; };
 		C2415C561F8BDF2D0078F971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */; };
 		C24B9A8E1F6AC3DB0082C426 /* InscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */; };
@@ -62,6 +67,11 @@
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
+		B0EAAFD61FF5305D00B77971 /* DevisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
+		B0EAAFD81FF530E000B77971 /* elementDevis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
+		B0EAAFDA1FF5312800B77971 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		B0EAAFDC1FF531C000B77971 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrintPageRenderer.swift; sourceTree = "<group>"; };
+		B0EAAFDE1FF531FB00B77971 /* DevisComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisComposer.swift; sourceTree = "<group>"; };
 		C215AC711F842948001EE1CB /* AdminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
 		C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionController.swift; sourceTree = "<group>"; };
@@ -175,6 +185,11 @@
 				B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */,
 				B05694A51FD0C36000393DFD /* ImageProperties.swift */,
 				B0799AD41FDB4D490066CF03 /* AmiController.swift */,
+				B0EAAFD61FF5305D00B77971 /* DevisController.swift */,
+				B0EAAFD81FF530E000B77971 /* elementDevis.swift */,
+				B0EAAFDA1FF5312800B77971 /* PreviewViewController.swift */,
+				B0EAAFDC1FF531C000B77971 /* CustomPrintPageRenderer.swift */,
+				B0EAAFDE1FF531FB00B77971 /* DevisComposer.swift */,
 			);
 			path = "AMI DECO";
 			sourceTree = "<group>";
@@ -410,8 +425,12 @@
 				B05694A01FCF23EF00393DFD /* PhotoController.swift in Sources */,
 				B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */,
 				B05694A21FCF45C100393DFD /* ImageCollectionViewCell.swift in Sources */,
+				B0EAAFDF1FF531FB00B77971 /* DevisComposer.swift in Sources */,
+				B0EAAFDB1FF5312800B77971 /* PreviewViewController.swift in Sources */,
+				B0EAAFD71FF5305D00B77971 /* DevisController.swift in Sources */,
 				C282A4561F680A7900E18B2B /* Users.swift in Sources */,
 				C29EA6701F56F93500456151 /* AccueilController.swift in Sources */,
+				B0EAAFD91FF530E000B77971 /* elementDevis.swift in Sources */,
 				B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */,
 				B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */,
 				B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */,
@@ -420,6 +439,7 @@
 				B0799AD51FDB4D490066CF03 /* AmiController.swift in Sources */,
 				C24B9A921F74186A0082C426 /* ClientsController.swift in Sources */,
 				B05694A41FD029DF00393DFD /* CollectionViewFlowLayout.swift in Sources */,
+				B0EAAFDD1FF531C000B77971 /* CustomPrintPageRenderer.swift in Sources */,
 				C29EA66E1F56F93500456151 /* AppDelegate.swift in Sources */,
 				C261AAD51F5F01190013AFFE /* ConnexionController.swift in Sources */,
 				C24B9A8E1F6AC3DB0082C426 /* InscriptionController.swift in Sources */,

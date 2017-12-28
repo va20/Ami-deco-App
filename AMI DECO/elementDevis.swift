@@ -1,3 +1,4 @@
+
 //
 //  Devis.swift
 //  AMIDECO
@@ -19,6 +20,21 @@ class elementDevis{
     var surface : Double/* ici on prend hauteur , longueur, largeur et on applique la formule */
     var typeTravaux:String
     var prix: Double
+    var hauteurTravauxSupp: Double?
+    var largeurTravauxSupp: Double?
+    var typeTravauxSupp: String?
+    var prixTravauxSupp: Double?
+    
+    
+    init(){
+        
+        self.typePiece=""
+        self.surface=0.0
+        self.typeTravaux=""
+        self.prix=0.0
+        
+    }
+    
     
     
     init(tp:String, surface:Double, tt:String, prix:Double){
@@ -27,6 +43,21 @@ class elementDevis{
         self.surface=surface
         self.typeTravaux=tt
         self.prix=prix
+        
+    }
+    
+    init(tp:String, surface:Double, tt:String, prix:Double, htps:Double,ltps:Double,tts:String,pts:Double){
+        
+        
+        self.typePiece=tp
+        self.surface=surface
+        self.typeTravaux=tt
+        self.prix=prix
+        self.hauteurTravauxSupp=htps
+        self.largeurTravauxSupp=ltps
+        self.typeTravauxSupp=tts
+        self.prixTravauxSupp=pts
+        
         
     }
     
