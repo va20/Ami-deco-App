@@ -71,6 +71,7 @@ class InscriptionController: UIViewController{
                 ]
                 let mail = ["email":  self.email.text]
                 let key = self.makeFirebaseString()
+                Auth.auth().currentUser!.sendEmailVerification(completion: nil)
                 print(key)
                 DatabaseServices.shared.usersRef.child(key).setValue(info)
                 DatabaseServices.shared.accomptRef.child(key).setValue(mail)

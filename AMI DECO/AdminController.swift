@@ -63,13 +63,18 @@ class AdminController: UIViewController {
 
         }
         else{
-            guard let user = Auth.auth().currentUser?.displayName else{ return }
-            welc.text = "Bonjour \(user)"
-            //self.back_button.accessibilityElementsHidden=false
-            self.back_button.isEnabled=false
-            self.supprimer.isHidden = true
-            // Do any additional setup after loading the view, typically from a nib.
-            //welc.text=pseudo
+            if (Auth.auth().currentUser?.isEmailVerified)!{
+                guard let user = Auth.auth().currentUser?.displayName else{ return }
+                welc.text = "Bonjour \(user)"
+                //self.back_button.accessibilityElementsHidden=false
+                self.back_button.isEnabled=false
+                self.supprimer.isHidden = true
+                // Do any additional setup after loading the view, typically from a nib.
+                //welc.text=pseudo
+            }
+            else{
+                return
+            }
         }
     }
     
