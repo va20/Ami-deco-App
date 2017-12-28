@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1079,7 +1079,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
-        <segue reference="IQT-pp-gmy"/>
+        <segue reference="cWH-pb-nNH"/>
         <segue reference="bdk-WF-6IT"/>
         <segue reference="4Sy-Mu-vVk"/>
         <segue reference="hOl-8E-xGv"/>

@@ -17,11 +17,9 @@
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
 		B0ABBD2E1FCE232A00DF0E4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABBD2D1FCE232900DF0E4C /* User.swift */; };
 		B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */; };
-		C215AC701F7A9189001EE1CB /* DevisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215AC6F1F7A9189001EE1CB /* DevisController.swift */; };
 		C215AC721F842948001EE1CB /* AdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215AC711F842948001EE1CB /* AdminController.swift */; };
 		C2415C561F8BDF2D0078F971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */; };
 		C24B9A8E1F6AC3DB0082C426 /* InscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */; };
-		C24B9A901F73FC7E0082C426 /* elementDevis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B9A8F1F73FC7D0082C426 /* elementDevis.swift */; };
 		C24B9A921F74186A0082C426 /* ClientsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B9A911F74186A0082C426 /* ClientsController.swift */; };
 		C261AAD51F5F01190013AFFE /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261AAD41F5F01190013AFFE /* ConnexionController.swift */; };
 		C282A4561F680A7900E18B2B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282A4551F680A7900E18B2B /* Users.swift */; };
@@ -64,11 +62,9 @@
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
-		C215AC6F1F7A9189001EE1CB /* DevisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
 		C215AC711F842948001EE1CB /* AdminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
 		C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionController.swift; sourceTree = "<group>"; };
-		C24B9A8F1F73FC7D0082C426 /* elementDevis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
 		C24B9A911F74186A0082C426 /* ClientsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsController.swift; sourceTree = "<group>"; };
 		C261AAD41F5F01190013AFFE /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
 		C282A4551F680A7900E18B2B /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -167,8 +163,6 @@
 				C261AAD41F5F01190013AFFE /* ConnexionController.swift */,
 				B06700DA1F9AAAF80000096D /* DatabaseServices.swift */,
 				B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */,
-				C215AC6F1F7A9189001EE1CB /* DevisController.swift */,
-				C24B9A8F1F73FC7D0082C426 /* elementDevis.swift */,
 				C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */,
 				C29EA6791F56F93500456151 /* Info.plist */,
 				C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */,
@@ -430,8 +424,6 @@
 				C261AAD51F5F01190013AFFE /* ConnexionController.swift in Sources */,
 				C24B9A8E1F6AC3DB0082C426 /* InscriptionController.swift in Sources */,
 				C215AC721F842948001EE1CB /* AdminController.swift in Sources */,
-				C24B9A901F73FC7E0082C426 /* elementDevis.swift in Sources */,
-				C215AC701F7A9189001EE1CB /* DevisController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
