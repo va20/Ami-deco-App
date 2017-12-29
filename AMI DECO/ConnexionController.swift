@@ -35,16 +35,29 @@ class ConnexionController: UIViewController{
                 AlerteController.showAlert(self, title: "Erreur connexion", message: error!.localizedDescription)
                 return
             }
-            guard let user = user else { return }
-            print(user.email ?? "Email")
-            print(user.displayName ?? "display name")
-            print(user.uid)
+            guard user != nil else { return }
             if(email_client=="ami.deco2@gmail.com"){
                 self.performSegue(withIdentifier: "ClientsController", sender: nil)
             }
-            else{
-                self.performSegue(withIdentifier: "AdminController", sender: nil)
+            else if let user = Auth.auth().currentUser{
+                if !user.isEmailVerified {
+                    let alert_verif = UIAlertController(title: "Vérification",message: "Votre adresse \(email_client) n'a pas encore été vérifié. Voulez-vous recevoir un autre mail de vérification? ",preferredStyle:.alert)
+                    let ok_action = UIAlertAction(title: "Oui", style: .default){
+                        (_) in
+                            user.sendEmailVerification(completion: nil)
+                    }
+                    let cancel_action = UIAlertAction(title: "Non", style: .default, handler: nil)
+                    
+                    alert_verif.addAction(ok_action)
+                    alert_verif.addAction(cancel_action)
+                    self.present(alert_verif,animated: true, completion: nil)
+                }
+                else{
+                    self.performSegue(withIdentifier: "AdminController", sender: nil)
+                    
+                }
             }
+            
         }
     }
     
@@ -56,6 +69,17 @@ class ConnexionController: UIViewController{
         super.viewDidLoad()
         ref=Database.database().reference()
         
+    }
+    
+    func makeFirebaseString()->String{
+        let arrCharacterToReplace = [".","#","$","[","]"]
+        var finalString = self.mail.text
+        
+        for character in arrCharacterToReplace{
+            finalString = finalString?.replacingOccurrences(of: character, with: ",")
+        }
+        
+        return finalString!
     }
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

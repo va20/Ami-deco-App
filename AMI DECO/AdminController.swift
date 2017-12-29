@@ -22,6 +22,22 @@ class AdminController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if Auth.auth().currentUser != nil{
+            print("fdp1")
+            if (!(Auth.auth().currentUser?.isEmailVerified)!){
+                print("fdp2")
+                do{
+                    try Auth.auth().signOut()
+                    print("fdp3")
+                    self.performSegue(withIdentifier: "ConnexionController", sender: nil)
+                }catch{
+                    print(error)
+                }
+            }
+        }
+    }
     
     @IBOutlet weak var welc: UILabel!
 
@@ -54,16 +70,17 @@ class AdminController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
-            let user = users[Myindex]
-            welc.text = "Bonjour "+user.nom!+" "+user.prenom!
-            //self.back_button.accessibilityElementsHidden=false
-            self.back_button.isEnabled=true
-            self.supprimer.isHidden = false
+        if Auth.auth().currentUser != nil{
+            if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+                let user = users[Myindex]
+                welc.text = "Bonjour "+user.nom!+" "+user.prenom!
+                //self.back_button.accessibilityElementsHidden=false
+                self.back_button.isEnabled=true
+                self.supprimer.isHidden = false
 
-        }
-        else{
-            if (Auth.auth().currentUser?.isEmailVerified)!{
+            }
+            else if(Auth.auth().currentUser?.email != "ami.deco2@gmail.com"){
+                print("fdp4")
                 guard let user = Auth.auth().currentUser?.displayName else{ return }
                 welc.text = "Bonjour \(user)"
                 //self.back_button.accessibilityElementsHidden=false
@@ -72,12 +89,9 @@ class AdminController: UIViewController {
                 // Do any additional setup after loading the view, typically from a nib.
                 //welc.text=pseudo
             }
-            else{
-                return
-            }
         }
-    }
     
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

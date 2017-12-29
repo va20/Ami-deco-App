@@ -14,7 +14,6 @@ class AlerteController{
         let action = UIAlertAction(title:"ok",style:.default,handler:nil)
         alert.addAction(action)
         inViewController.present(alert, animated: true,completion:nil)
-        
     }
 }
 

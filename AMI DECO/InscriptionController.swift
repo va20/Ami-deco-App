@@ -56,30 +56,57 @@ class InscriptionController: UIViewController{
             guard let user = user else{ return }
             //print(user.email ?? "Email n'existe pas ")
             //print(user.uid)
-            
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = nom_client+" "+prenom_client
+                Auth.auth().currentUser!.sendEmailVerification(completion: { (error) in
+                    guard error == nil else{
+                        AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
+                        return
+                    }
+                    let alert = UIAlertController(title:"Vérification",message:"Un mail de vérification vient d'être envoyé à \(self.email.text ?? "") .",preferredStyle:.alert)
+                    let action = UIAlertAction(title:"ok",style:.default){
+                        (_) in
+                        
+                        let changeRequest = user.createProfileChangeRequest()
+                        changeRequest.displayName = nom_client+" "+prenom_client
+                        
+                        changeRequest.commitChanges(completion: {(error) in
+                            guard error == nil else{
+                                AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
+                                return
+                            }
+                        })
+                        let info = ["nom":  self.nom.text,
+                                    "prenom":   self.prenom.text,
+                                    "email":    self.email.text
+                        ]
+                        let mail = ["email":  self.email.text]
+                        let key = self.makeFirebaseString()
+                        print(key)
+                        DatabaseServices.shared.usersRef.child(key).setValue(info)
+                        DatabaseServices.shared.accomptRef.child(key).setValue(mail)
+                        DatabaseServices.shared.factureRef.child(key).setValue(mail)
+                        DatabaseServices.shared.travauxRef.child(key).setValue(mail)
+                        DatabaseServices.shared.photoRef.child(key).setValue(mail)
+                        
+                        if Auth.auth().currentUser != nil{
+                            print("fdp1")
+                            if (!(Auth.auth().currentUser?.isEmailVerified)!){
+                                print("fdp2")
+                                do{
+                                    try Auth.auth().signOut()
+                                    print("fdp3")
+                                }catch{
+                                    print(error)
+                                }
+                            }
+                        }
+                        
+                        self.performSegue(withIdentifier: "AccueilController", sender: nil)
 
-            changeRequest.commitChanges(completion: {(error) in
-                guard error == nil else{
-                    AlerteController.showAlert(self, title: "Erreur Request", message: error!.localizedDescription)
-                    return
-                }
-                let info = ["nom":  self.nom.text,
-                            "prenom":   self.prenom.text,
-                            "email":    self.email.text
-                ]
-                let mail = ["email":  self.email.text]
-                let key = self.makeFirebaseString()
-                Auth.auth().currentUser!.sendEmailVerification(completion: nil)
-                print(key)
-                DatabaseServices.shared.usersRef.child(key).setValue(info)
-                DatabaseServices.shared.accomptRef.child(key).setValue(mail)
-                DatabaseServices.shared.factureRef.child(key).setValue(mail)
-                DatabaseServices.shared.travauxRef.child(key).setValue(mail)
-                DatabaseServices.shared.photoRef.child(key).setValue(mail)
-                self.performSegue(withIdentifier: "AdminController", sender: nil)
-            })
+                    }
+                    alert.addAction(action)
+                    self.present(alert, animated: true,completion:nil)
+                })
+            
         }
         
     }

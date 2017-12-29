@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -633,6 +633,7 @@
                         <outlet property="supprimer" destination="gRE-q9-cWE" id="KcV-38-ahb"/>
                         <outlet property="welc" destination="GgS-Vd-Hlg" id="idZ-Ko-ncT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="UR0-ka-rA2"/>
+                        <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" id="g2S-aB-3mG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-V3-luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1064,7 +1065,7 @@
                         <outlet property="nom" destination="fpP-ah-pb2" id="UHc-sU-Hdg"/>
                         <outlet property="pass" destination="Yj4-Rt-efI" id="GXF-Qf-va0"/>
                         <outlet property="prenom" destination="33p-1U-lt6" id="XOX-ee-ihW"/>
-                        <segue destination="gK9-2D-JPI" kind="show" identifier="AdminController" id="sQ9-TI-7gi"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="JMo-CU-Aih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgx-ba-Iww" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1079,10 +1080,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
-        <segue reference="cWH-pb-nNH"/>
-        <segue reference="bdk-WF-6IT"/>
-        <segue reference="4Sy-Mu-vVk"/>
-        <segue reference="hOl-8E-xGv"/>
+        <segue reference="UR0-ka-rA2"/>
+        <segue reference="2uu-it-Q7t"/>
+        <segue reference="w5N-0M-gIN"/>
+        <segue reference="g2S-aB-3mG"/>
         <segue reference="v2h-4W-wYV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

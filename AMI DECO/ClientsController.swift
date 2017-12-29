@@ -86,7 +86,6 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                
             }
                 
             }, withCancel: nil)

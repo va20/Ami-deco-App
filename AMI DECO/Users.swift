@@ -25,9 +25,5 @@ class Users{
         self.mdp=mdp
         self.mail=mail
         
-        }
-    
-    
-    
-    
+    }
 }
