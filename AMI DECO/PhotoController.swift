@@ -54,8 +54,10 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                 data = UIImageJPEGRepresentation(pickedImage, 0.8)!
                 
                 //cree une reference vers le fichier qu'on veut uploader
+                let user_tmp = users[Myindex]
+                let photo_name = randomString(20)
+                let imageRef = Storage.storage().reference().child("images/\(user_tmp.email!)/" + photo_name)
                 
-                let imageRef = Storage.storage().reference().child("images/" + randomString(20))
             
                 //uploader le fichier au images/randomString
                 _ = imageRef.putData(data, metadata: nil) { (metadata,error) in
@@ -73,7 +75,8 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                         let child_user = self.makeFirebaseString(user.email!)
                         print("child ami DECOO:"+child_user)
                         let key_user = DatabaseServices.shared.photoRef.child(child_user).childByAutoId().key
-                        let image_user = ["url": downloadURL?.absoluteString]
+                        let image_user = ["url": downloadURL?.absoluteString,
+                                          "nom":    photo_name]
                         let childUpdate_user = ["/\(key_user)":image_user]
                         DatabaseServices.shared.photoRef.child(child_user).updateChildValues(childUpdate_user)
                     }

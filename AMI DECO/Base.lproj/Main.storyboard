@@ -634,6 +634,7 @@
                         <outlet property="welc" destination="GgS-Vd-Hlg" id="idZ-Ko-ncT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AccueilController" id="UR0-ka-rA2"/>
                         <segue destination="YXJ-gl-bzE" kind="show" identifier="ConnexionController" id="g2S-aB-3mG"/>
+                        <segue destination="Uun-wX-pzn" kind="show" identifier="Client_delete" id="0td-Ue-TAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-V3-luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1081,8 +1082,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
         <segue reference="UR0-ka-rA2"/>
-        <segue reference="2uu-it-Q7t"/>
-        <segue reference="w5N-0M-gIN"/>
+        <segue reference="Iwf-gw-JSp"/>
+        <segue reference="0td-Ue-TAE"/>
         <segue reference="g2S-aB-3mG"/>
         <segue reference="v2h-4W-wYV"/>
     </inferredMetricsTieBreakers>

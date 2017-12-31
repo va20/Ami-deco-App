@@ -12,4 +12,5 @@ class User: NSObject {
     var nom: String?
     var prenom: String?
     var email: String?
+    var id: String?
 }

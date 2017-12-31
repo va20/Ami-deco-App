@@ -76,7 +76,8 @@ class InscriptionController: UIViewController{
                         })
                         let info = ["nom":  self.nom.text,
                                     "prenom":   self.prenom.text,
-                                    "email":    self.email.text
+                                    "email":    self.email.text,
+                                    "id_client":   self.pass.text
                         ]
                         let mail = ["email":  self.email.text]
                         let key = self.makeFirebaseString()
