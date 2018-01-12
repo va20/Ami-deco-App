@@ -13,6 +13,8 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    var index_path:Int = 0
     var customFlowImageLayout: CollectionViewFlowLayout!
     var images = [ImageProperties]()
     
@@ -20,11 +22,11 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     @IBOutlet weak var add_photo: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
             self.add_photo.isEnabled=true
         }
@@ -141,8 +143,17 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)as! ImageCollectionViewCell
         
         let image = images[indexPath.row]
-        
+        self.index_path=indexPath.row
         cell.imageView.sd_setImage(with: URL(string: image.url), placeholderImage: UIImage(named: "image"))
+        
+        let tap_image = UITapGestureRecognizer(target: self,action: #selector(imageTapped))
+        
+        let tap_image_long = UILongPressGestureRecognizer(target: self,action: #selector(Long_Press))
+        
+        cell.imageView.addGestureRecognizer(tap_image)
+        
+        cell.imageView.addGestureRecognizer(tap_image_long)
+        
         
         return cell
         
@@ -157,6 +168,52 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         }
         
         return finalString
+    }
+    
+    @IBAction func Long_Press(_ sender: UILongPressGestureRecognizer){
+        if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+            let image = images[self.index_path]
+            let alert_verif = UIAlertController(title: "Avertissement",message: "Êtes-vous sûr de vouloir supprimer cette image?",preferredStyle:.alert)
+            let user_tmp = users[Myindex]
+            let email = self.makeFirebaseString(user_tmp.email!)
+            let ok_action = UIAlertAction(title: "Oui", style: .default){
+                (_) in
+                let storage_ref = Storage.storage().reference().child("images/\(user_tmp.email!)/")
+                storage_ref.child(image.nom!).delete(completion: { (error) in
+                    guard error == nil else{
+                        AlerteController.showAlert(self, title: "Erreur connexion", message: error!.localizedDescription)
+                        return
+                    }
+                })
+                self.performSegue(withIdentifier: "Client_delete", sender: nil)
+            }
+            let cancel_action = UIAlertAction(title: "Non", style: .default, handler: nil)
+            
+            alert_verif.addAction(ok_action)
+            alert_verif.addAction(cancel_action)
+            self.present(alert_verif,animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .white
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

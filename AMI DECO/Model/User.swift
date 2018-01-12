@@ -9,8 +9,8 @@
 import UIKit
 
 class User: NSObject {
-    var nom: String?
-    var prenom: String?
-    var email: String?
-    var id: String?
+    @objc var nom: String?
+    @objc var prenom: String?
+    @objc var email: String?
+    @objc var id: String?
 }
