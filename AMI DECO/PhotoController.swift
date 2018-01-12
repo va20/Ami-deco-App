@@ -12,6 +12,7 @@ import SDWebImage
 import FirebaseDatabase
 import FirebaseAuth
 
+//photo
 class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var index_path:Int = 0
