@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -984,7 +984,6 @@
         <!--Devis Controller-->
         <scene sceneID="C1Q-JO-Vzn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f29-Ty-IXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ENT-d4-Kvu" customClass="DevisController" customModule="AMIDECO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Sc-gH-goT"/>
@@ -1167,6 +1166,7 @@
                         <outlet property="validation" destination="PKF-Iw-Hcl" id="kgB-rf-YB6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f29-Ty-IXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-475.36231884057975" y="2875.271739130435"/>
         </scene>

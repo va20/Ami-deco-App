@@ -69,7 +69,7 @@
 		B0799AD41FDB4D490066CF03 /* AmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiController.swift; sourceTree = "<group>"; };
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B0BCD218200E87EE00043468 /* pdf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdf; path = "../../Downloads/dossier sans titre-2/pdf"; sourceTree = "<group>"; };
+		B0BCD218200E87EE00043468 /* pdf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdf; path = "AMI DECO/pdf"; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
 		B0EAAFD61FF5305D00B77971 /* DevisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
 		B0EAAFD81FF530E000B77971 /* elementDevis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		C261AAD41F5F01190013AFFE /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
 		C282A4551F680A7900E18B2B /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		C29EA66A1F56F93500456151 /* AMIDECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMIDECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C29EA66D1F56F93500456151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C29EA66D1F56F93500456151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C29EA66F1F56F93500456151 /* AccueilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccueilController.swift; sourceTree = "<group>"; };
 		C29EA6721F56F93500456151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C29EA6741F56F93500456151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
