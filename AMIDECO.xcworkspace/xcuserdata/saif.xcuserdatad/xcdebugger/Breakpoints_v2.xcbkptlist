@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AMI DECO/AppDelegate.swift"
+            timestampString = "536170500.657028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AMIDECO.AppDelegate.__deallocating_deinit"
+                  moduleName = "AMIDECO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saif/Desktop/amiappli/AMI%20DECO/AppDelegate.swift"
+                  timestampString = "529954909.066491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AMIDECO.AppDelegate.__allocating_init() -&gt; AMIDECO.AppDelegate"
+                  moduleName = "AMIDECO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saif/Desktop/amiappli/AMI%20DECO/AppDelegate.swift"
+                  timestampString = "529954909.070433"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AMIDECO.AppDelegate.init() -&gt; AMIDECO.AppDelegate"
+                  moduleName = "AMIDECO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saif/Desktop/amiappli/AMI%20DECO/AppDelegate.swift"
+                  timestampString = "529954909.075515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "AMIDECO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saif/Desktop/amiappli/AMI%20DECO/AppDelegate.swift"
+                  timestampString = "529954909.079104"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
