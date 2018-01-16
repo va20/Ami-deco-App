@@ -24,7 +24,7 @@ class elementDevis{
     var largeurTravauxSupp: Double?
     var typeTravauxSupp: String?
     var prixTravauxSupp: Double?
-    
+    var murType:String
     
     init(){
         
@@ -32,34 +32,35 @@ class elementDevis{
         self.surface=0.0
         self.typeTravaux=""
         self.prix=0.0
-        
+        self.murType=""
     }
     
     
     
-    init(tp:String, surface:Double, tt:String, prix:Double){
+    init(tp:String, surface:Double, tt:String, prix:Double,murType:String){
         
         self.typePiece=tp
         self.surface=surface
         self.typeTravaux=tt
         self.prix=prix
-        
+        self.murType=murType
     }
     
-    init(tp:String, surface:Double, tt:String, prix:Double, htps:Double,ltps:Double,tts:String,pts:Double){
-        
-        
-        self.typePiece=tp
-        self.surface=surface
-        self.typeTravaux=tt
-        self.prix=prix
-        self.hauteurTravauxSupp=htps
-        self.largeurTravauxSupp=ltps
-        self.typeTravauxSupp=tts
-        self.prixTravauxSupp=pts
-        
-        
-    }
+    /*  init(tp:String, surface:Double, tt:String, prix:Double, htps:Double,ltps:Double,tts:String,pts:Double,mt:String){
+     
+     
+     self.typePiece=tp
+     self.surface=surface
+     self.typeTravaux=tt
+     self.prix=prix
+     self.hauteurTravauxSupp=htps
+     self.largeurTravauxSupp=ltps
+     self.typeTravauxSupp=tts
+     self.prixTravauxSupp=pts
+     self.murType=mt
+     
+     
+     }*/
     
     
 }

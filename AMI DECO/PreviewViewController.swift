@@ -14,6 +14,7 @@ import MessageUI
 class PreviewViewController: UIViewController, MFMailComposeViewControllerDelegate{
     
     
+    
     @IBOutlet weak var webPreview: UIWebView!
     
     var devisComposer: DevisComposer!
@@ -53,8 +54,9 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
      */
     
     
-    @IBAction func exportToPdf(_ sender: Any) {
-        
+    
+    
+    @IBAction func exportPdf(_ sender: Any) {
         devisComposer = DevisComposer()
         let devisHTML = devisComposer.renderDevis(devisElement: devisInfo )
         HTMLContent = devisHTML
@@ -62,6 +64,7 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
         showOptionsAlert()
         
     }
+    
     func showOptionsAlert() {
         let alertController = UIAlertController(title: "Devis terminé ", message: "Votre devis à été crée.\n\n Que voulez-vous faire?", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -100,4 +103,5 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
         }
     }
 }
+
 

@@ -17,6 +17,7 @@
 		B0799AD51FDB4D490066CF03 /* AmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0799AD41FDB4D490066CF03 /* AmiController.swift */; };
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
 		B0ABBD2E1FCE232A00DF0E4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABBD2D1FCE232900DF0E4C /* User.swift */; };
+		B0BCD219200E885700043468 /* pdf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCD218200E87EE00043468 /* pdf */; };
 		B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */; };
 		B0EAAFD71FF5305D00B77971 /* DevisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD61FF5305D00B77971 /* DevisController.swift */; };
 		B0EAAFD91FF530E000B77971 /* elementDevis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD81FF530E000B77971 /* elementDevis.swift */; };
@@ -68,12 +69,13 @@
 		B0799AD41FDB4D490066CF03 /* AmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiController.swift; sourceTree = "<group>"; };
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B0BCD218200E87EE00043468 /* pdf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdf; path = "../../Downloads/dossier sans titre-2/pdf"; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
 		B0EAAFD61FF5305D00B77971 /* DevisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
 		B0EAAFD81FF530E000B77971 /* elementDevis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
 		B0EAAFDA1FF5312800B77971 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B0EAAFDC1FF531C000B77971 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrintPageRenderer.swift; sourceTree = "<group>"; };
-		B0EAAFDE1FF531FB00B77971 /* DevisComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisComposer.swift; sourceTree = "<group>"; };
+		B0EAAFDE1FF531FB00B77971 /* DevisComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevisComposer.swift; path = "AMI DECO/DevisComposer.swift"; sourceTree = SOURCE_ROOT; };
 		C215AC711F842948001EE1CB /* AdminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
 		C2415C551F8BDF2D0078F971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C24B9A8D1F6AC3DB0082C426 /* InscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		C29EA6611F56F93400456151 = {
 			isa = PBXGroup;
 			children = (
+				B0BCD218200E87EE00043468 /* pdf */,
 				C29EA66C1F56F93500456151 /* AMI DECO */,
 				C29EA6811F56F93600456151 /* AMI DECOTests */,
 				C29EA68C1F56F93600456151 /* AMI DECOUITests */,
@@ -336,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BCD219200E885700043468 /* pdf in Resources */,
 				C29EA6781F56F93500456151 /* LaunchScreen.storyboard in Resources */,
 				C2415C561F8BDF2D0078F971 /* GoogleService-Info.plist in Resources */,
 				C29EA6751F56F93500456151 /* Assets.xcassets in Resources */,

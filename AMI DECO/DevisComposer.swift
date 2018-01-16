@@ -10,17 +10,17 @@ import UIKit
 
 class DevisComposer: NSObject {
     
-    let pathToDevisHTMLTemplate = Bundle.main.path(forResource: "Devis", ofType: "html",inDirectory:"www")
+    let pathToDevisHTMLTemplate = Bundle.main.path(forResource: "Devis", ofType: "html",inDirectory:"pdf")
     
-    let pathToSingleItemHTMLTemplate = Bundle.main.path(forResource: "ElementDevis", ofType: "html",inDirectory:"www")
+    let pathToSingleItemHTMLTemplate = Bundle.main.path(forResource: "ElementDevis", ofType: "html",inDirectory:"pdf")
     
     
-    let pathToLastItemHTMLTemplate = Bundle.main.path(forResource: "Last", ofType: "html",inDirectory:"www")
+    let pathToLastItemHTMLTemplate = Bundle.main.path(forResource: "Last", ofType: "html",inDirectory:"pdf")
     
     let senderInfo = "Ahmed Abdellatif <br>72 rue de Rome <br>75008 PARIS<br>France <br> AMI DECO </br>"
     
     
-    let logoImageURL = Bundle.main.path(forResource: "logo", ofType: "png",inDirectory:"www")
+    let logoImageURL = Bundle.main.path(forResource: "logo", ofType: "png",inDirectory:"pdf")
     
     let DevisName=" "
     /*Nom du client à récuperer ici */
@@ -49,6 +49,8 @@ class DevisComposer: NSObject {
             
             
             // Load the invoice HTML template code into a String variable.
+            print("^^^^^^^^")
+            print(pathToDevisHTMLTemplate)
             var HTMLContent = try String(contentsOfFile: pathToDevisHTMLTemplate!)
             // Replace all the placeholders with real values except for the items.
             // The logo image.
@@ -98,7 +100,7 @@ class DevisComposer: NSObject {
                 }
                 
                 // Replace the description and price placeholders with the actual values.
-                itemHTMLContent = itemHTMLContent.replacingOccurrences(of:"#ITEM_DESC#", with: devisElement[i].typeTravaux)
+                itemHTMLContent = itemHTMLContent.replacingOccurrences(of:"#ITEM_DESC#", with: devisElement[i].typeTravaux+" "+devisElement[i].murType)
                 
                 // Format each item's price as a currency value.
                 var b:String = String(format:"%f", devisElement[i].prix)
