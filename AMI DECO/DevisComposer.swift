@@ -179,7 +179,7 @@ class DevisComposer: NSObject {
             DevisName = "Devis_"+user_tmp.nom!+"_"+user_tmp.prenom!+"_"+file_string_alea+".pdf"
         
         
-            pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/Devis\(DevisName).pdf"
+            pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/\(DevisName)"
             pdfData?.write(toFile: pdfFilename, atomically: true)
         
             let fileRef = Storage.storage().reference().child("Devis/\(user_tmp.email!)/"+DevisName)
