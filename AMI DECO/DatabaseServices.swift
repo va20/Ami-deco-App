@@ -19,4 +19,5 @@ class DatabaseServices{
     let accomptRef = Database.database().reference().child("accompt")
     let factureRef = Database.database().reference().child("facture")
     let photoRef = Database.database().reference().child("photo")
+    let devisRef = Database.database().reference().child("devis")
 }

@@ -11,7 +11,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 
-var Myindex = 0
+var Myindex = -1
 var users=[User]()
 
 class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSource{
@@ -28,7 +28,7 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
                                                            style: .plain, target:self,action:#selector(singOut))
-        Myindex = 0
+        Myindex = -1
         users.removeAll()
         user_list()
     }

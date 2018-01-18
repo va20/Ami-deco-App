@@ -87,6 +87,7 @@ class InscriptionController: UIViewController{
                         DatabaseServices.shared.factureRef.child(key).setValue(mail)
                         DatabaseServices.shared.travauxRef.child(key).setValue(mail)
                         DatabaseServices.shared.photoRef.child(key).setValue(mail)
+                        DatabaseServices.shared.devisRef.child(key).setValue(mail)
                         
                         if Auth.auth().currentUser != nil{
                             print("fdp1")

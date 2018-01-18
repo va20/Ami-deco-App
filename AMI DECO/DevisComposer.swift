@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
+
 
 class DevisComposer: NSObject {
     
@@ -22,7 +26,7 @@ class DevisComposer: NSObject {
     
     let logoImageURL = Bundle.main.path(forResource: "logo", ofType: "png",inDirectory:"pdf")
     
-    let DevisName=" "
+    var DevisName=" "
     /*Nom du client à récuperer ici */
     let recipientInfo=" "
     
@@ -127,6 +131,31 @@ class DevisComposer: NSObject {
     }
     
     
+    func randomString(_ length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
+    }
+    
+    func makeFirebaseString(_ email: String) -> String{
+        let arrCharacterToReplace = [".","#","$","[","]"]
+        var finalString = email
+        
+        for character in arrCharacterToReplace{
+            finalString = finalString.replacingOccurrences(of: character, with: ",")
+        }
+        
+        return finalString
+    }
+    
     func formatAndGetCurrentDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
@@ -140,9 +169,42 @@ class DevisComposer: NSObject {
         
         let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
         
-        pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/Devis\(DevisName).pdf"
-        pdfData?.write(toFile: pdfFilename, atomically: true)
+        print(Myindex)
+        if(Myindex == -1){
+            print("il me faut le mail")
+        }
+        else if(Myindex != -1){
+            let user_tmp = users[Myindex]
+            let file_string_alea = self.randomString(10)
+            DevisName = "Devis_"+user_tmp.nom!+"_"+user_tmp.prenom!+"_"+file_string_alea+".pdf"
         
+        
+            pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/Devis\(DevisName).pdf"
+            pdfData?.write(toFile: pdfFilename, atomically: true)
+        
+            let fileRef = Storage.storage().reference().child("Devis/\(user_tmp.email!)/"+DevisName)
+        
+        
+            //uploader le fichier au images/randomString
+            _ = fileRef.putData(pdfData! as Data, metadata: nil) { (metadata,error) in
+                guard let metadata = metadata else {
+                    return
+                }
+                //metadata contient des informations sur le fichier uploader
+                let downloadURL = metadata.downloadURL()
+            
+                //mise a jour l'url dans la base de donnée
+                if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
+                    let child_user = self.makeFirebaseString(user_tmp.email!)
+                    print("child ami DECOO:"+child_user)
+                    let key_user = DatabaseServices.shared.devisRef.child(child_user).childByAutoId().key
+                    let file_user = ["url": downloadURL?.absoluteString,
+                                  "nom":    file_string_alea]
+                    let childUpdate_user = ["/\(key_user)":file_user]
+                    DatabaseServices.shared.devisRef.child(child_user).updateChildValues(childUpdate_user)
+                }
+            }
+        }
         print(pdfFilename)
     }
     
