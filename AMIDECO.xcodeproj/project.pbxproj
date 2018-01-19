@@ -13,12 +13,13 @@
 		B05694A61FD0C36000393DFD /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A51FD0C36000393DFD /* ImageProperties.swift */; };
 		B06514F91FF7B4790015403B /* Photo_Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06514F81FF7B4790015403B /* Photo_Url.swift */; };
 		B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06700DA1F9AAAF80000096D /* DatabaseServices.swift */; };
-		B0688E882011399600888A82 /* file_url.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0688E872011399600888A82 /* file_url.swift */; };
+		B0688E882011399600888A82 /* File_url.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0688E872011399600888A82 /* File_url.swift */; };
 		B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */; };
 		B0799AD51FDB4D490066CF03 /* AmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0799AD41FDB4D490066CF03 /* AmiController.swift */; };
 		B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08003031F9D0CB800F7ABA2 /* AlerteController.swift */; };
 		B0ABBD2E1FCE232A00DF0E4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABBD2D1FCE232900DF0E4C /* User.swift */; };
 		B0BCD219200E885700043468 /* pdf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCD218200E87EE00043468 /* pdf */; };
+		B0BDA27920121DDB00E10023 /* DevisListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDA27820121DDB00E10023 /* DevisListController.swift */; };
 		B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */; };
 		B0EAAFD71FF5305D00B77971 /* DevisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD61FF5305D00B77971 /* DevisController.swift */; };
 		B0EAAFD91FF530E000B77971 /* elementDevis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAAFD81FF530E000B77971 /* elementDevis.swift */; };
@@ -66,13 +67,14 @@
 		B05694A51FD0C36000393DFD /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		B06514F81FF7B4790015403B /* Photo_Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_Url.swift; sourceTree = "<group>"; };
 		B06700DA1F9AAAF80000096D /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
-		B0688E872011399600888A82 /* file_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file_url.swift; sourceTree = "<group>"; };
+		B0688E872011399600888A82 /* File_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_url.swift; sourceTree = "<group>"; };
 		B06A6EE31FB38C4400B75019 /* PassRecupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassRecupViewController.swift; sourceTree = "<group>"; };
 		B0799AD41FDB4D490066CF03 /* AmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiController.swift; sourceTree = "<group>"; };
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0BCD218200E87EE00043468 /* pdf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdf; path = "AMI DECO/pdf"; sourceTree = "<group>"; };
 		B0BDA2772011F81A00E10023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0BDA27820121DDB00E10023 /* DevisListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisListController.swift; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
 		B0EAAFD61FF5305D00B77971 /* DevisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
 		B0EAAFD81FF530E000B77971 /* elementDevis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 			children = (
 				B0ABBD2D1FCE232900DF0E4C /* User.swift */,
 				B06514F81FF7B4790015403B /* Photo_Url.swift */,
-				B0688E872011399600888A82 /* file_url.swift */,
+				B0688E872011399600888A82 /* File_url.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +203,7 @@
 				B056949F1FCF23EE00393DFD /* PhotoController.swift */,
 				B0EAAFDA1FF5312800B77971 /* PreviewViewController.swift */,
 				C282A4551F680A7900E18B2B /* Users.swift */,
+				B0BDA27820121DDB00E10023 /* DevisListController.swift */,
 			);
 			path = "AMI DECO";
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				B05694A01FCF23EF00393DFD /* PhotoController.swift in Sources */,
 				B06A6EE41FB38C4400B75019 /* PassRecupViewController.swift in Sources */,
 				B05694A21FCF45C100393DFD /* ImageCollectionViewCell.swift in Sources */,
+				B0BDA27920121DDB00E10023 /* DevisListController.swift in Sources */,
 				B0EAAFDF1FF531FB00B77971 /* DevisComposer.swift in Sources */,
 				B06514F91FF7B4790015403B /* Photo_Url.swift in Sources */,
 				B0EAAFDB1FF5312800B77971 /* PreviewViewController.swift in Sources */,
@@ -448,7 +452,7 @@
 				C29EA6701F56F93500456151 /* AccueilController.swift in Sources */,
 				B0EAAFD91FF530E000B77971 /* elementDevis.swift in Sources */,
 				B0BF619F1F9D4EBB00E26AB4 /* Deconnexion.swift in Sources */,
-				B0688E882011399600888A82 /* file_url.swift in Sources */,
+				B0688E882011399600888A82 /* File_url.swift in Sources */,
 				B08003041F9D0CB800F7ABA2 /* AlerteController.swift in Sources */,
 				B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */,
 				B05694A61FD0C36000393DFD /* ImageProperties.swift in Sources */,

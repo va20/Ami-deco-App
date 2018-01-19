@@ -53,8 +53,7 @@ class DevisComposer: NSObject {
             
             
             // Load the invoice HTML template code into a String variable.
-            print("^^^^^^^^")
-            print(pathToDevisHTMLTemplate)
+            
             var HTMLContent = try String(contentsOfFile: pathToDevisHTMLTemplate!)
             // Replace all the placeholders with real values except for the items.
             // The logo image.
@@ -85,10 +84,6 @@ class DevisComposer: NSObject {
             // For the last one we'll use the "last_item.html" template.
             for i in 0..<devisElement.count {
                 var itemHTMLContent: String!
-                print("--------------------------")
-                print(pathToSingleItemHTMLTemplate)
-                print(pathToLastItemHTMLTemplate)
-                print(pathToDevisHTMLTemplate!)
                 
                 
                 // Determine the proper template file.
@@ -107,7 +102,7 @@ class DevisComposer: NSObject {
                 itemHTMLContent = itemHTMLContent.replacingOccurrences(of:"#ITEM_DESC#", with: devisElement[i].typeTravaux+" "+devisElement[i].murType)
                 
                 // Format each item's price as a currency value.
-                var b:String = String(format:"%f", devisElement[i].prix)
+                let b:String = String(format:"%f", devisElement[i].prix)
                 
                 let formattedPrice = AppDelegate.getAppDelegate().getStringValueFormattedAsCurrency(value:b)
                 itemHTMLContent = itemHTMLContent.replacingOccurrences(of:"#PRICE#", with: formattedPrice)
@@ -175,8 +170,7 @@ class DevisComposer: NSObject {
         }
         else if(Myindex != -1){
             let user_tmp = users[Myindex]
-            let file_string_alea = self.randomString(10)
-            DevisName = "Devis_"+user_tmp.nom!+"_"+user_tmp.prenom!+"_"+file_string_alea+".pdf"
+            DevisName = user_tmp.nom!+"_"+user_tmp.prenom!+"_"+self.getTodayString()+".pdf"
         
         
             pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/\(DevisName)"
@@ -199,7 +193,7 @@ class DevisComposer: NSObject {
                     print("child ami DECOO:"+child_user)
                     let key_user = DatabaseServices.shared.devisRef.child(child_user).childByAutoId().key
                     let file_user = ["url": downloadURL?.absoluteString,
-                                  "nom":    file_string_alea]
+                                     "nom":    self.DevisName]
                     let childUpdate_user = ["/\(key_user)":file_user]
                     DatabaseServices.shared.devisRef.child(child_user).updateChildValues(childUpdate_user)
                 }
@@ -207,6 +201,26 @@ class DevisComposer: NSObject {
         }
         print(pdfFilename)
     }
+    
+    func getTodayString() -> String{
+        
+        let date = Date()
+        let calender = Calendar.current
+        let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        
+        let year = components.year
+        let month = components.month
+        let day = components.day
+        let hour = components.hour
+        let minute = components.minute
+        let second = components.second
+        
+        let today_string = String(day!) + "-" + String(month!) + "-" + String(year!) + "-" + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+        
+        return today_string
+        
+    }
+
     
     func drawPDFUsingPrintPageRenderer(printPageRenderer: UIPrintPageRenderer) -> NSData! {
         let data = NSMutableData()

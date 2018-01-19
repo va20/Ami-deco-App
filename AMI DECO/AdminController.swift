@@ -59,6 +59,7 @@ class AdminController: UIViewController {
                 DatabaseServices.shared.accomptRef.child(email).removeValue()
                 DatabaseServices.shared.factureRef.child(email).removeValue()
                 DatabaseServices.shared.travauxRef.child(email).removeValue()
+                DatabaseServices.shared.devisRef.child(email).removeValue()
                 DatabaseServices.shared.photoRef.child(email).removeValue()
 
                 

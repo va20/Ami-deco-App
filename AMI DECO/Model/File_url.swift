@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class file_url: NSObject {
-    var url: String?
-    var nom: String?
+class File_url: NSObject {
+    @objc var url: String?
+    @objc var nom: String?
 }

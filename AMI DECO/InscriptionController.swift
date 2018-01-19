@@ -90,12 +90,9 @@ class InscriptionController: UIViewController{
                         DatabaseServices.shared.devisRef.child(key).setValue(mail)
                         
                         if Auth.auth().currentUser != nil{
-                            print("fdp1")
                             if (!(Auth.auth().currentUser?.isEmailVerified)!){
-                                print("fdp2")
                                 do{
                                     try Auth.auth().signOut()
-                                    print("fdp3")
                                 }catch{
                                     print(error)
                                 }
@@ -126,13 +123,6 @@ class InscriptionController: UIViewController{
         }
         return randomString
     }
-    
-    /*func isValidEmail(testStr:String)-> Bool{
-        print("validate calendar: \(testStr)")
-        let mailRegExp="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", mailRegExp)
-        return emailTest.evaluate(with: testStr)
-    }*/
     
     func makeFirebaseString()->String{
         let arrCharacterToReplace = [".","#","$","[","]"]

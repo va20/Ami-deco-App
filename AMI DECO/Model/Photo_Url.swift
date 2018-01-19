@@ -9,6 +9,6 @@
 import UIKit
 
 class Photo_Url: NSObject {
-    var url: String?
-    var nom: String?
+    @objc var url: String?
+    @objc var nom: String?
 }

@@ -186,7 +186,7 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                         return
                     }
                 })
-                self.performSegue(withIdentifier: "Client_delete", sender: nil)
+                self.collectionView.reloadData()
             }
             let cancel_action = UIAlertAction(title: "Non", style: .default, handler: nil)
             
