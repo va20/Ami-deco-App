@@ -72,6 +72,7 @@
 		B08003031F9D0CB800F7ABA2 /* AlerteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteController.swift; sourceTree = "<group>"; };
 		B0ABBD2D1FCE232900DF0E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0BCD218200E87EE00043468 /* pdf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdf; path = "AMI DECO/pdf"; sourceTree = "<group>"; };
+		B0BDA2772011F81A00E10023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0BF619E1F9D4EBB00E26AB4 /* Deconnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deconnexion.swift; sourceTree = "<group>"; };
 		B0EAAFD61FF5305D00B77971 /* DevisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevisController.swift; sourceTree = "<group>"; };
 		B0EAAFD81FF530E000B77971 /* elementDevis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elementDevis.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C29EA66F1F56F93500456151 /* AccueilController.swift */,
+				B0BDA2772011F81A00E10023 /* GoogleService-Info.plist */,
 				C215AC711F842948001EE1CB /* AdminController.swift */,
 				B08003031F9D0CB800F7ABA2 /* AlerteController.swift */,
 				B0799AD41FDB4D490066CF03 /* AmiController.swift */,
@@ -410,7 +412,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftPhotoGallery/SwiftPhotoGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -420,7 +421,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhotoGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
