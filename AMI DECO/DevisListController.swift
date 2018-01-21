@@ -54,11 +54,14 @@ class DevisListController: UIViewController,UITableViewDelegate,UITableViewDataS
         if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
             let mail = users[Myindex].email
             let fileRef = Storage.storage().reference().child("Devis/\(mail!)/"+file_list[file_index].nom!)
+            print(fileRef)
             print(file_index)
             print(file_list[file_index].nom!)
-            let localURL = URL(string: "/Users/saif/Desktop/"+file_list[file_index].nom!)
+            let local_File = "\(AppDelegate.getAppDelegate().getDocDir())/\(file_list[file_index].nom!)"
+            let encoded = local_File.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+            let localURL = URL(string: encoded)!
             print(localURL)
-            _ = fileRef.write(toFile: localURL!) { url, error in
+            _ = fileRef.write(toFile: localURL) { url, error in
                 guard error == nil else{
                     AlerteController.showAlert(self, title: "Erreur", message: error!.localizedDescription)
                     return
