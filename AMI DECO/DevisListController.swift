@@ -57,9 +57,9 @@ class DevisListController: UIViewController,UITableViewDelegate,UITableViewDataS
             print(fileRef)
             print(file_index)
             print(file_list[file_index].nom!)
-            let local_File = "\(AppDelegate.getAppDelegate().getDocDir())/\(file_list[file_index].nom!)"
-            let encoded = local_File.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
-            let localURL = URL(string: encoded)!
+            let local_File = "file:///\(AppDelegate.getAppDelegate().getDocDir())/\(self.randomString(5)+file_list[file_index].nom!)"
+            //let encoded = local_File.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+            let localURL = URL(string: local_File)!
             print(localURL)
             _ = fileRef.write(toFile: localURL) { url, error in
                 guard error == nil else{
@@ -120,5 +120,18 @@ class DevisListController: UIViewController,UITableViewDelegate,UITableViewDataS
         return finalString
     }
     
+    func randomString(_ length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
+    }
 
 }

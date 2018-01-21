@@ -28,7 +28,8 @@ class DevisComposer: NSObject {
     
     var DevisName=" "
     /*Nom du client à récuperer ici */
-    let recipientInfo=" "
+    var recipientInfo=" "
+    
     
     var pdfFilename: String!
     
@@ -73,6 +74,12 @@ class DevisComposer: NSObject {
             
             
             // Recipient info.
+            if(Myindex != -1){
+                recipientInfo=users[Myindex].nom!+" "+users[Myindex].prenom!
+            }
+            else if(Myindex == -1){
+                recipientInfo = "adresse client"
+            }
             HTMLContent = HTMLContent.replacingOccurrences(of:"#RECIPIENT_INFO#", with: recipientInfo.replacingOccurrences(of:"\n", with: "<br>"))
             
             // Total amount.
