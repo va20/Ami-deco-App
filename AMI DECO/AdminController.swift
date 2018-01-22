@@ -14,9 +14,12 @@ class AdminController: UIViewController {
     
     var photo_url_list = [Photo_Url]()
 
+    @IBOutlet weak var faire_devis: UIButton!
     @IBOutlet weak var back_button: UIBarButtonItem!
     
     @IBOutlet weak var supprimer: UIButton!
+    
+    @IBOutlet weak var faire_accompt: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -150,15 +153,19 @@ class AdminController: UIViewController {
                 welc.text = "Bonjour "+user.nom!+" "+user.prenom!
                 //self.back_button.accessibilityElementsHidden=false
                 self.back_button.isEnabled=true
+                self.faire_accompt.isEnabled=true
+                self.faire_devis.isEnabled=true
                 self.supprimer.isHidden = false
 
             }
             else if(Auth.auth().currentUser?.email != "ami.deco2@gmail.com"){
-                print("fdp4")
+                
                 guard let user = Auth.auth().currentUser?.displayName else{ return }
                 welc.text = "Bonjour \(user)"
                 //self.back_button.accessibilityElementsHidden=false
                 self.back_button.isEnabled=false
+                self.faire_accompt.isEnabled=false
+                self.faire_devis.isEnabled=false
                 self.supprimer.isHidden = true
                 // Do any additional setup after loading the view, typically from a nib.
                 //welc.text=pseudo
