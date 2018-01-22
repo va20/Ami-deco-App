@@ -57,10 +57,10 @@ class DevisListController: UIViewController,UITableViewDelegate,UITableViewDataS
             print(fileRef)
             print(file_index)
             print(file_list[file_index].nom!)
-            let local_File = "file:///\(AppDelegate.getAppDelegate().getDocDir())/\(self.randomString(5)+file_list[file_index].nom!)"
-            //let encoded = local_File.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
-            let localURL = URL(string: local_File)!
-            print(localURL)
+            let local_File = "file:///Users/saif/Desktop/\(file_list[file_index].nom!)"
+            let encoded = local_File.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+            let localURL = URL(string: encoded)!
+            print(encoded)
             _ = fileRef.write(toFile: localURL) { url, error in
                 guard error == nil else{
                     AlerteController.showAlert(self, title: "Erreur", message: error!.localizedDescription)
