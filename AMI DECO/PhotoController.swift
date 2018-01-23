@@ -147,6 +147,10 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         self.index_path=indexPath.row
         cell.imageView.sd_setImage(with: URL(string: image.url), placeholderImage: UIImage(named: "image"))
         
+        print("collection view : ",images.capacity)
+        print(image.nom)
+        print(self.index_path)
+        
         let tap_image = UITapGestureRecognizer(target: self,action: #selector(imageTapped))
         
         let tap_image_long = UILongPressGestureRecognizer(target: self,action: #selector(Long_Press))
@@ -154,7 +158,6 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
         cell.imageView.addGestureRecognizer(tap_image)
         
         cell.imageView.addGestureRecognizer(tap_image_long)
-        
         
         return cell
         
@@ -172,11 +175,16 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     }
     
     @IBAction func Long_Press(_ sender: UILongPressGestureRecognizer){
+        let image_tmp = sender.view as! UIImageView
+        print("image sent",image_tmp)
         if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
             let image = images[self.index_path]
             let alert_verif = UIAlertController(title: "Avertissement",message: "Êtes-vous sûr de vouloir supprimer cette image?",preferredStyle:.alert)
             let user_tmp = users[Myindex]
             let email = self.makeFirebaseString(user_tmp.email!)
+            print("logn_peress : ",images.capacity)
+            print(image.nom)
+            print(self.index_path)
             let ok_action = UIAlertAction(title: "Oui", style: .default){
                 (_) in
                 let storage_ref = Storage.storage().reference().child("images/\(user_tmp.email!)/")
@@ -185,6 +193,7 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
                         AlerteController.showAlert(self, title: "Erreur connexion", message: error!.localizedDescription)
                         return
                     }
+                    DatabaseServices.shared.usersRef.child(email).child(image.nom).removeValue()
                 })
                 self.collectionView.reloadData()
             }

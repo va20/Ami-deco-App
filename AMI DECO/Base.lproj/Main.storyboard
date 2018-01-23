@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -445,7 +445,7 @@
                                 <items>
                                     <navigationItem title="Espace client" id="bNf-ND-ogh">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" style="plain" id="uzc-pp-eXv">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJh-gO-NOJ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJh-gO-NOJ">
                                                 <rect key="frame" x="20" y="7" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Retour"/>
@@ -562,26 +562,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-Zb-2fe">
-                                <rect key="frame" x="0.0" y="18" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Mes photos" id="RNU-nj-D5p">
-                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="yqK-qD-wfb">
-                                            <connections>
-                                                <segue destination="gK9-2D-JPI" kind="show" identifier="showAdminController" id="Iwf-gw-JSp"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xob-vB-9ze">
-                                            <connections>
-                                                <action selector="loadImage:" destination="8y6-aJ-gx4" id="GlD-zY-8pr"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-FV-P7t">
-                                <rect key="frame" x="0.0" y="62" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="62" width="414" height="533"/>
                                 <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Qn-ah-az3">
                                     <size key="itemSize" width="167" height="137"/>
@@ -598,7 +580,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78D-nc-3Pl" userLabel="Image">
-                                                    <rect key="frame" x="0.0" y="43" width="167" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="137"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -613,6 +595,24 @@
                                     <outlet property="delegate" destination="8y6-aJ-gx4" id="sWr-DC-c2L"/>
                                 </connections>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-Zb-2fe">
+                                <rect key="frame" x="0.0" y="2" width="394" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Mes photos" id="RNU-nj-D5p">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="yqK-qD-wfb">
+                                            <connections>
+                                                <segue destination="gK9-2D-JPI" kind="show" identifier="showAdminController" id="Iwf-gw-JSp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xob-vB-9ze">
+                                            <connections>
+                                                <action selector="loadImage:" destination="8y6-aJ-gx4" id="GlD-zY-8pr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -708,13 +708,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-MF-fSH">
-                                <rect key="frame" x="0.0" y="-14" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-kR-eFH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Exporter en PDF" id="5x4-6M-yWC">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="bUJ-r4-hJf">
+                                            <connections>
+                                                <segue destination="ENT-d4-Kvu" kind="show" identifier="show_devis_page" id="e3I-69-JRe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Espace admin" id="cOk-bC-qcN">
+                                            <connections>
+                                                <segue destination="l8k-hF-f8H" kind="show" identifier="espace_admin" id="2Tz-zY-oFp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-om-4zU">
-                                <rect key="frame" x="184" y="322" width="118" height="30"/>
+                                <rect key="frame" x="0.0" y="575" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PDF"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Exporter en PDF">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="exportPdf:" destination="qaW-Ll-FyH" eventType="touchUpInside" id="V28-eM-U2F"/>
                                 </connections>
@@ -725,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdF-Fp-Lb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1219" y="1087"/>
+            <point key="canvasLocation" x="-1220.2898550724638" y="1086.6847826086957"/>
         </scene>
         <!--Devis List Controller-->
         <scene sceneID="X1y-67-n5I">
@@ -934,7 +955,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0e-1s-w6j">
-                                <rect key="frame" x="1" y="-9" width="414" height="44"/>
+                                <rect key="frame" x="1" y="-6" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Faire un devis" id="gJ7-F1-mEA">
@@ -1227,9 +1248,10 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gHg-TF-u0l"/>
         <segue reference="K0U-QY-5zt"/>
         <segue reference="JMo-CU-Aih"/>
-        <segue reference="XZ3-Mt-edE"/>
+        <segue reference="e3I-69-JRe"/>
         <segue reference="AQo-ZB-D5x"/>
         <segue reference="0td-Ue-TAE"/>
         <segue reference="7Dr-Xg-JYG"/>
