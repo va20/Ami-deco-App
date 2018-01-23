@@ -20,6 +20,11 @@ class InscriptionController: UIViewController{
     
     @IBOutlet weak var pass: UITextField!
     
+    @IBOutlet weak var voie: UITextField!
+    
+    @IBOutlet weak var codep: UITextField!
+    
+    @IBOutlet weak var ville: UITextField!
     var ref:DatabaseReference?
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +48,13 @@ class InscriptionController: UIViewController{
             let email_client = email.text,
             email_client != "",
             let pass_client = pass.text,
-            pass_client != ""
+            pass_client != "",
+            let voie_client = voie.text,
+            voie_client != "",
+            let codep_client = codep.text,
+            codep_client != "",
+            let ville_client = ville.text,
+            ville_client != ""
             else{
                 AlerteController.showAlert(self, title: "Manque info",message: "Veuillez remplir tous les champs s'il vous plaît")
                 return
@@ -77,7 +88,9 @@ class InscriptionController: UIViewController{
                         let info = ["nom":  self.nom.text,
                                     "prenom":   self.prenom.text,
                                     "email":    self.email.text,
-                                    "id_client":   self.pass.text
+                                    "codep":    self.codep.text,
+                                    "voie":     self.voie.text,
+                                    "ville":    self.ville.text
                         ]
                         let mail = ["email":  self.email.text]
                         let key = self.makeFirebaseString()

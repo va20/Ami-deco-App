@@ -224,7 +224,15 @@ class DevisController :UIViewController,UIPickerViewDataSource,UIPickerViewDeleg
         cpt+=1;
         
     }
-    
+    // une fonction qui permer de retourner en arriere: soit espace client soit vers espace admin
+    @IBAction func retour_arriere(_ sender: UIBarButtonItem) {
+        if(Myindex == -1){
+            self.performSegue(withIdentifier: "retour_espace_admin", sender: nil)
+        }
+        else{
+            self.performSegue(withIdentifier: "retour_espace_client", sender: nil)
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         /*let alertController = UIAlertController(title: "Devis validé ", message: "Etes-vous sur de vouloir valider ? Toute validation est définitive.\n\n Que voulez-vous faire?", preferredStyle: UIAlertControllerStyle.alert)
          
