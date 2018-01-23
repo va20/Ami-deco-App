@@ -14,9 +14,15 @@ import MessageUI
 class PreviewViewController: UIViewController, MFMailComposeViewControllerDelegate{
     
     
+    @IBOutlet weak var nom: UITextField!
     
+    @IBOutlet weak var prenom: UITextField!
     @IBOutlet weak var webPreview: UIWebView!
     
+    @IBOutlet weak var ville: UITextField!
+    @IBOutlet weak var codep: UITextField!
+    @IBOutlet weak var voie: UITextField!
+    @IBOutlet weak var email: UITextField!
     var devisComposer: DevisComposer!
     
     var devisInfo:[elementDevis] = []
@@ -26,7 +32,22 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if(Myindex == -1){
+            self.nom.isEnabled = false
+            self.prenom.isEnabled = false
+            self.email.isEnabled = false
+            self.voie.isEnabled = false
+            self.codep.isEnabled = false
+            self.ville.isEnabled = false
+        }
+        else{
+            self.nom.isEnabled = true
+            self.prenom.isEnabled = true
+            self.email.isEnabled = true
+            self.voie.isEnabled = true
+            self.codep.isEnabled = true
+            self.ville.isEnabled = true
+        }
         
         
         // Do any additional setup after loading the view.
@@ -57,11 +78,36 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
     
     
     @IBAction func exportPdf(_ sender: Any) {
-        devisComposer = DevisComposer()
-        let devisHTML = devisComposer.renderDevis(devisElement: devisInfo )
-        HTMLContent = devisHTML
-        devisComposer.exportHTMLContentToPDF(HTMLContent: HTMLContent)
-        showOptionsAlert()
+        if(Myindex != -1){
+            devisComposer = DevisComposer()
+            let devisHTML = devisComposer.renderDevis(devisElement: devisInfo )
+            HTMLContent = devisHTML
+            devisComposer.exportHTMLContentToPDF(HTMLContent: HTMLContent)
+            showOptionsAlert()
+        }
+        else if (Myindex == -1){
+            guard let nom_client = nom.text,
+                nom_client != "",
+                let prenom_client = prenom.text,
+                prenom_client != "",
+                let email_client = email.text,
+                email_client != "",
+                let voie_client = voie.text,
+                voie_client != "",
+                let codep_client = codep.text,
+                codep_client != "",
+                let ville_client = ville.text,
+                ville_client != ""
+                else{
+                    AlerteController.showAlert(self, title: "Manque info",message: "Veuillez remplir tous les champs s'il vous plaît")
+                    return
+            }
+            devisComposer = DevisComposer()
+            let devisHTML = devisComposer.renderDevis(devisElement: devisInfo )
+            HTMLContent = devisHTML
+            devisComposer.exportHTMLContentToPDF(HTMLContent: HTMLContent)
+            showOptionsAlert()
+        }
         
     }
     
