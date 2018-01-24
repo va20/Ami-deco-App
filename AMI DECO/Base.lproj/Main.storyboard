@@ -1121,19 +1121,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-m1-brd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="yhR-PN-FFg"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Les spécialistes de la peinture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qD-fH1">
-                                <rect key="frame" x="3" y="259" width="344" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-2t-N5F">
-                                <rect key="frame" x="38" y="437" width="104" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-2t-N5F">
+                                <rect key="frame" x="38" y="437" width="145" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="C5K-YI-4HY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Connexion">
                                     <color key="titleColor" red="0.15764471757836918" green="0.76667302214613176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1142,9 +1140,12 @@
                                     <action selector="connexionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45d-2Q-oj9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-gn-b3e">
-                                <rect key="frame" x="252" y="464" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-gn-b3e">
+                                <rect key="frame" x="224" y="448" width="152" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="VPV-MM-cxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="Inscription">
                                     <color key="titleColor" red="0.15764471760000001" green="0.76667302209999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1156,14 +1157,30 @@
                                 <rect key="frame" x="9" y="72" width="162" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Les spécialistes de la peinture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qD-fH1">
+                                <rect key="frame" x="38" y="253" width="344" height="148"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2rt-m1-brd" secondAttribute="trailing" id="13n-Et-VgA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2rt-m1-brd" secondAttribute="bottom" constant="48" id="UV8-gL-K0X"/>
-                            <constraint firstAttribute="trailing" secondItem="2rt-m1-brd" secondAttribute="trailing" id="Ueb-fm-lAI"/>
-                            <constraint firstItem="2rt-m1-brd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c9U-p0-es0"/>
-                            <constraint firstItem="2rt-m1-brd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cjn-3i-oPs"/>
+                            <constraint firstItem="5aa-gn-b3e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="428" id="9kb-FE-cle"/>
+                            <constraint firstAttribute="trailing" secondItem="5aa-gn-b3e" secondAttribute="trailing" constant="38" id="AuB-ch-DAa"/>
+                            <constraint firstItem="Lsi-qD-fH1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BFG-yF-0Sr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5aa-gn-b3e" secondAttribute="bottom" constant="226" id="QRC-8w-GeG"/>
+                            <constraint firstItem="Lsi-qD-fH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="S4N-hf-vu3"/>
+                            <constraint firstItem="5aa-gn-b3e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="224" id="S8n-de-Mqf"/>
+                            <constraint firstItem="2rt-m1-brd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aT6-xp-pIR"/>
+                            <constraint firstItem="2rt-m1-brd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="fsh-7g-0tS"/>
+                            <constraint firstItem="bdU-2t-N5F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="417" id="iaP-2V-WIe"/>
+                            <constraint firstAttribute="trailing" secondItem="bdU-2t-N5F" secondAttribute="trailing" constant="231" id="mHi-He-1cx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bdU-2t-N5F" secondAttribute="bottom" constant="215" id="nMc-Nq-xGK"/>
+                            <constraint firstAttribute="trailing" secondItem="2rt-m1-brd" secondAttribute="trailing" id="obg-4V-0m1"/>
+                            <constraint firstItem="bdU-2t-N5F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="sG9-F6-THN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2rt-m1-brd" secondAttribute="bottom" id="scG-kd-V5I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="to5-CH-shN"/>
@@ -1176,7 +1193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-1129.385307346327"/>
+            <point key="canvasLocation" x="1675.3623188405797" y="-1129.8913043478262"/>
         </scene>
         <!--Inscription Controller-->
         <scene sceneID="GVs-Dl-5rm">
@@ -1340,13 +1357,13 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K0U-QY-5zt"/>
+        <segue reference="O3W-3H-Ngg"/>
         <segue reference="JMo-CU-Aih"/>
         <segue reference="e3I-69-JRe"/>
-        <segue reference="AQo-ZB-D5x"/>
+        <segue reference="bdk-WF-6IT"/>
         <segue reference="0td-Ue-TAE"/>
-        <segue reference="7Dr-Xg-JYG"/>
-        <segue reference="2Tz-zY-oFp"/>
+        <segue reference="hOl-8E-xGv"/>
+        <segue reference="v2h-4W-wYV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
