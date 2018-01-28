@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,42 +25,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorful-heart" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-N3-0HB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I53-O3-eLC">
-                                <rect key="frame" x="0.0" y="43" width="414" height="87"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I53-O3-eLC">
+                                <rect key="frame" x="0.0" y="43" width="414" height="52"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Faire un devis"/>
                                 <connections>
                                     <segue destination="ENT-d4-Kvu" kind="show" identifier="devis_mail" id="E3Y-zc-Apr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgL-hD-faW">
-                                <rect key="frame" x="0.0" y="317" width="414" height="78"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgL-hD-faW">
+                                <rect key="frame" x="0.0" y="303" width="414" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Mes clients"/>
                                 <connections>
                                     <segue destination="Uun-wX-pzn" kind="show" identifier="show_clients" id="4Sy-Mu-vVk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-1e-AG5">
-                                <rect key="frame" x="0.0" y="403" width="414" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-1e-AG5">
+                                <rect key="frame" x="0.0" y="401" width="414" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Mes documents"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-qO-BSH">
-                                <rect key="frame" x="0.0" y="138" width="414" height="78"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-qO-BSH">
+                                <rect key="frame" x="0.0" y="137" width="414" height="38"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Faire un accompte"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i44-eq-Doa">
-                                <rect key="frame" x="0.0" y="224" width="414" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i44-eq-Doa">
+                                <rect key="frame" x="0.0" y="224" width="414" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Faire une facture"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmq-EW-lCI">
-                                <rect key="frame" x="0.0" y="550" width="414" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="vax-Sb-Maf"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmq-EW-lCI">
+                                <rect key="frame" x="118" y="647" width="178" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Deconnexion">
                                     <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,21 +69,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i44-eq-Doa" firstAttribute="top" secondItem="DNN-qO-BSH" secondAttribute="bottom" constant="8" id="1Hf-AP-K24"/>
-                            <constraint firstItem="Z7u-zl-FD1" firstAttribute="top" secondItem="dmq-EW-lCI" secondAttribute="bottom" constant="133" id="4ZA-1c-Nrx"/>
-                            <constraint firstItem="DNN-qO-BSH" firstAttribute="top" secondItem="I53-O3-eLC" secondAttribute="bottom" constant="8" id="8aR-2J-pOh"/>
-                            <constraint firstItem="i44-eq-Doa" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="KMy-90-SXU"/>
+                            <constraint firstItem="sSh-1e-AG5" firstAttribute="top" secondItem="pgL-hD-faW" secondAttribute="bottom" constant="54" id="07z-8E-XG2"/>
+                            <constraint firstItem="dmq-EW-lCI" firstAttribute="top" secondItem="sSh-1e-AG5" secondAttribute="bottom" constant="107" id="8EK-ag-J9P"/>
                             <constraint firstItem="Z7u-zl-FD1" firstAttribute="top" secondItem="pLj-N3-0HB" secondAttribute="bottom" id="LYm-WI-2pV"/>
-                            <constraint firstItem="I53-O3-eLC" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="MMS-Ad-g4v"/>
-                            <constraint firstItem="DNN-qO-BSH" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="NqO-EE-sEv"/>
                             <constraint firstAttribute="trailing" secondItem="pLj-N3-0HB" secondAttribute="trailing" id="SDL-gK-foR"/>
+                            <constraint firstItem="i44-eq-Doa" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="W6A-Bp-Fnb"/>
                             <constraint firstItem="pLj-N3-0HB" firstAttribute="leading" secondItem="79A-Ja-hY0" secondAttribute="leading" id="YqI-eV-R0p"/>
-                            <constraint firstItem="sSh-1e-AG5" firstAttribute="top" secondItem="pgL-hD-faW" secondAttribute="bottom" constant="8" id="btP-I0-KsO"/>
-                            <constraint firstItem="dmq-EW-lCI" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="flh-o5-HHO"/>
-                            <constraint firstItem="I53-O3-eLC" firstAttribute="top" secondItem="mvG-C9-chO" secondAttribute="bottom" constant="23" id="mgh-fp-eDF"/>
-                            <constraint firstItem="sSh-1e-AG5" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="swR-Ud-CMy"/>
-                            <constraint firstItem="pgL-hD-faW" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="t41-Te-4Cd"/>
-                            <constraint firstItem="pgL-hD-faW" firstAttribute="top" secondItem="i44-eq-Doa" secondAttribute="bottom" constant="8" id="x9v-HU-y5V"/>
+                            <constraint firstAttribute="trailing" secondItem="I53-O3-eLC" secondAttribute="trailing" id="Zps-sG-1rE"/>
+                            <constraint firstItem="DNN-qO-BSH" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="cTd-zM-ZDZ"/>
+                            <constraint firstItem="dmq-EW-lCI" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="gkX-He-0U7"/>
+                            <constraint firstItem="pgL-hD-faW" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="hvu-Sz-6oK"/>
+                            <constraint firstItem="I53-O3-eLC" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="nW7-wW-Da4"/>
+                            <constraint firstItem="sSh-1e-AG5" firstAttribute="centerX" secondItem="79A-Ja-hY0" secondAttribute="centerX" id="sk0-ZL-skr"/>
+                            <constraint firstItem="I53-O3-eLC" firstAttribute="leading" secondItem="79A-Ja-hY0" secondAttribute="leading" id="xXy-Nx-Xka"/>
                             <constraint firstItem="pLj-N3-0HB" firstAttribute="top" secondItem="79A-Ja-hY0" secondAttribute="top" id="xdb-mI-eWc"/>
                         </constraints>
                     </view>
@@ -460,7 +455,7 @@
                                 <items>
                                     <navigationItem title="Espace client" id="bNf-ND-ogh">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" style="plain" id="uzc-pp-eXv">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJh-gO-NOJ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJh-gO-NOJ">
                                                 <rect key="frame" x="20" y="7" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Retour"/>
@@ -1386,11 +1381,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O3W-3H-Ngg"/>
-        <segue reference="JMo-CU-Aih"/>
+        <segue reference="IQT-pp-gmy"/>
         <segue reference="E3Y-zc-Apr"/>
         <segue reference="bdk-WF-6IT"/>
         <segue reference="4Sy-Mu-vVk"/>
-        <segue reference="7Dr-Xg-JYG"/>
+        <segue reference="hOl-8E-xGv"/>
         <segue reference="v2h-4W-wYV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
