@@ -30,7 +30,9 @@
                                     <constraint firstAttribute="height" constant="35" id="NXK-1e-KnA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="Faire un devis"/>
+                                <state key="normal" title="Faire un devis">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="ENT-d4-Kvu" kind="show" identifier="devis_mail" id="E3Y-zc-Apr"/>
                                 </connections>
@@ -41,7 +43,9 @@
                                     <constraint firstAttribute="height" constant="44" id="ijI-jE-j0e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="Mes clients"/>
+                                <state key="normal" title="Mes clients">
+                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Uun-wX-pzn" kind="show" identifier="show_clients" id="4Sy-Mu-vVk"/>
                                 </connections>
@@ -52,7 +56,9 @@
                                     <constraint firstAttribute="height" constant="36" id="ya0-iP-45a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="Faire un accompte"/>
+                                <state key="normal" title="Faire un accompte">
+                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i44-eq-Doa">
                                 <rect key="frame" x="101.66666666666669" y="171" width="211" height="47"/>
@@ -60,7 +66,9 @@
                                     <constraint firstAttribute="height" constant="47" id="aql-7I-5KF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="Faire une facture"/>
+                                <state key="normal" title="Faire une facture">
+                                    <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmq-EW-lCI">
                                 <rect key="frame" x="118" y="647" width="178" height="47"/>
@@ -78,7 +86,9 @@
                                     <constraint firstAttribute="height" constant="49" id="iUF-jU-V06"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="Mes documents"/>
+                                <state key="normal" title="Mes documents">
+                                    <color key="titleColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1788,12 +1798,11 @@
         <image name="test" width="300" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gHg-TF-u0l"/>
         <segue reference="K0U-QY-5zt"/>
-        <segue reference="UR0-ka-rA2"/>
-        <segue reference="e3I-69-JRe"/>
+        <segue reference="IQT-pp-gmy"/>
+        <segue reference="E3Y-zc-Apr"/>
         <segue reference="AQo-ZB-D5x"/>
-        <segue reference="w5N-0M-gIN"/>
+        <segue reference="4Sy-Mu-vVk"/>
         <segue reference="g2S-aB-3mG"/>
         <segue reference="wC7-Ar-J4Q"/>
     </inferredMetricsTieBreakers>
