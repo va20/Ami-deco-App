@@ -32,6 +32,7 @@ class PreviewViewController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         if(Myindex == -1){
             self.nom.isEnabled = false
             self.prenom.isEnabled = false

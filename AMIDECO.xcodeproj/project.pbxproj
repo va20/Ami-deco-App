@@ -11,6 +11,8 @@
 		B05694A21FCF45C100393DFD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A11FCF45C100393DFD /* ImageCollectionViewCell.swift */; };
 		B05694A41FD029DF00393DFD /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */; };
 		B05694A61FD0C36000393DFD /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05694A51FD0C36000393DFD /* ImageProperties.swift */; };
+		B0602BF22020D415007A28AE /* Pods_AMIDECO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCD2994157653D48BA4D883 /* Pods_AMIDECO.framework */; };
+		B0602BF32020D415007A28AE /* Pods_AMIDECO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCD2994157653D48BA4D883 /* Pods_AMIDECO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B06514F91FF7B4790015403B /* Photo_Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06514F81FF7B4790015403B /* Photo_Url.swift */; };
 		B06700DB1F9AAAF80000096D /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06700DA1F9AAAF80000096D /* DatabaseServices.swift */; };
 		B0688E882011399600888A82 /* File_url.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0688E872011399600888A82 /* File_url.swift */; };
@@ -59,12 +61,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B0602BF42020D415007A28AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0602BF32020D415007A28AE /* Pods_AMIDECO.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		265941B50E46627BDB284FEE /* Pods-AMIDECO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMIDECO.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMIDECO/Pods-AMIDECO.release.xcconfig"; sourceTree = "<group>"; };
 		B056949F1FCF23EE00393DFD /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoController.swift; sourceTree = "<group>"; };
 		B05694A11FCF45C100393DFD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B05694A31FD029DF00393DFD /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B05694A51FD0C36000393DFD /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
+		B0602BF52020DBFB007A28AE /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06514F81FF7B4790015403B /* Photo_Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_Url.swift; sourceTree = "<group>"; };
 		B06700DA1F9AAAF80000096D /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
 		B0688E872011399600888A82 /* File_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_url.swift; sourceTree = "<group>"; };
@@ -110,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA44266F484EB030453AC84 /* Pods_AMIDECO.framework in Frameworks */,
+				B0602BF22020D415007A28AE /* Pods_AMIDECO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +170,7 @@
 		C29EA6611F56F93400456151 = {
 			isa = PBXGroup;
 			children = (
+				B0602BF52020DBFB007A28AE /* SDWebImage.framework */,
 				B0BCD218200E87EE00043468 /* pdf */,
 				C29EA66C1F56F93500456151 /* AMI DECO */,
 				C29EA6811F56F93600456151 /* AMI DECOTests */,
@@ -247,6 +266,7 @@
 				C29EA6681F56F93400456151 /* Resources */,
 				A5CE174793A32F4153F291D6 /* [CP] Embed Pods Frameworks */,
 				443F259428C0667F6BCD3A89 /* [CP] Copy Pods Resources */,
+				B0602BF42020D415007A28AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -631,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E96411FCCC6CE76E93A4B1F8 /* Pods-AMIDECO.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 265941B50E46627BDB284FEE /* Pods-AMIDECO.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

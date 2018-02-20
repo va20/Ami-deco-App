@@ -23,6 +23,7 @@ class DevisListController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         file_index = -1
         file_list.removeAll()
         recup_devis_list()

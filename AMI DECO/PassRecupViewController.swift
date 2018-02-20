@@ -16,7 +16,7 @@ class PassRecupViewController: UIViewController {
     @IBOutlet weak var client_email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 

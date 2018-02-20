@@ -147,6 +147,7 @@ class AdminController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         if Auth.auth().currentUser != nil{
             if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
                 let user = users[Myindex]

@@ -67,6 +67,7 @@ class ConnexionController: UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         ref=Database.database().reference()
         
     }

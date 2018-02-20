@@ -26,6 +26,7 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Deconnexion",
                                                            style: .plain, target:self,action:#selector(singOut))
         Myindex = -1
@@ -64,15 +65,16 @@ class ClientsController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var deconnexion: UIButton!
-    @IBAction func singOut(_ sender: UIButton) {
+    @IBOutlet weak var deconnx: UIBarButtonItem!
+    
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+    
         do{
             try Auth.auth().signOut()
             self.performSegue(withIdentifier: "AccueilController", sender: nil)
         }catch{
             print(error)
         }
-    
     }
     
     

@@ -78,6 +78,7 @@ class DevisController :UIViewController,UIPickerViewDataSource,UIPickerViewDeleg
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         typeTravauxPiece.delegate=self
         typeTravauxMur.delegate=self
         

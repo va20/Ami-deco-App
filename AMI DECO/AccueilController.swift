@@ -9,6 +9,19 @@
 import UIKit
 import FirebaseAuth
 
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class AccueilController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +76,7 @@ class AccueilController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view, typically from a nib.
         print("Bienvenu chez AMI DECO")
     }
@@ -72,6 +86,7 @@ class AccueilController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
 
 }
 

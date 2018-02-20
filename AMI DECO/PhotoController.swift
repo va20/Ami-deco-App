@@ -27,7 +27,7 @@ class PhotoController: UIViewController, UICollectionViewDataSource, UIImagePick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         if(Auth.auth().currentUser?.email == "ami.deco2@gmail.com"){
             self.add_photo.isEnabled=true
         }

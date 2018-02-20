@@ -16,7 +16,7 @@ class Deconnexion: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         /*guard let username = Auth.auth().currentUser?.displayName else{
             //return
         }*/
